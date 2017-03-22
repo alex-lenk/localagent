@@ -52,13 +52,11 @@ footer {
   color: #4f8ad9;
   border-radius: 30px;
   background-color: #ffffff;
-  border: 3px solid transparent;
-  box-shadow: 0 8px 12px 0 rgba(#4f8ad9, 0.25);
+  box-shadow: 0 8px 12px 3px rgba(79, 138, 217, 0.25);
   transition: all 0.3s ease;
   @include RobotoBold;
   &:hover {
-    border-color: #4f8ad9;
-    box-shadow: none;
+    opacity: .9;
   }
   .search {
     width: 18px;
@@ -116,6 +114,7 @@ footer {
   background-color: transparent;
   border: 1px solid transparent;
   border-bottom-color: #ffffff;
+  font-size: 16px;
   &::-webkit-input-placeholder {
     color: #ffffff;
     font-size: 16px;

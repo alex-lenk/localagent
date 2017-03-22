@@ -3,4 +3,7 @@
 vcs.xml
 bower_components
 node_modules
-sources
+source
+desktop.ini
+build
+test

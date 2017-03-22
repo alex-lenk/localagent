@@ -22,11 +22,15 @@
   .collapsed {
     color: #505b6a;
     border-bottom-color: #eaeaea;
+    transition: all 0.3s ease;
     .minus {
       display: none;
     }
     .plus {
       display: inline-block;
+    }
+    &:hover {
+      color: #4f8ad9;
     }
   }
 }
