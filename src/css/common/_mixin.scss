@@ -1,0 +1,68 @@
+@function calculateRem($size) {
+  $remSize: $size / 13px;
+  @return $remSize * 1rem;
+}
+
+//@include font-size(14px);
+@mixin font-size($size) {
+  font-size: calculateRem($size);
+}
+
+//Альтернатива display none
+//@include hide-display;
+@mixin hide-display() {
+  position: absolute;
+  overflow: hidden;
+  height: 1px;
+  width: 1px;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+@mixin visible-display() {
+  opacity: 1;
+  width: auto;
+  height: auto;
+  overflow: visible;
+}
+
+//Очиститель потоков
+@mixin clearfix {
+  &:after {
+    display: table;
+    clear: both;
+    content: "";
+  }
+}
+
+@mixin ProximaNovaSemibold {
+  font-family: "ProximaNova-Semibold", sans-serif;
+}
+
+@mixin ProximaNovaBold {
+  font-family: "ProximaNova-Bold", sans-serif;
+}
+
+@mixin RobotoLight {
+  font-family: "Roboto-Light", sans-serif;
+}
+
+@mixin RobotoRegular {
+  font-family: "Roboto-Regular", sans-serif;
+}
+
+@mixin RobotoMedium {
+  font-family: "Roboto-Medium", sans-serif;
+}
+
+@mixin RobotoBold {
+  font-family: "Roboto-Bold", sans-serif;
+}
+
+@mixin Rubik {
+  font-family: "Rubik", sans-serif;
+}
+
+@mixin RubikLight {
+  font-family: "Rubik-Light", sans-serif;
+}

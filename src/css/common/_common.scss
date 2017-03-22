@@ -1,0 +1,121 @@
+html,
+body {
+  background: #ffffff;
+  color: #505b6a;
+  font-size: 17px;
+  line-height: 1;
+  @include RobotoLight;
+}
+
+body {
+  min-width: 320px;
+}
+
+a {
+  color: #4f8ad9;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  &:hover,
+  &:focus {
+    color: #4f8ad9;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+[role="button"] {
+  cursor: pointer;
+}
+
+b, strong {
+  font-weight: 700;
+  @include RobotoBold;
+}
+
+h1 {
+  margin-top: 0;
+  padding-top: 0;
+  font-weight: normal;
+  font-size: 33px;
+  @include RobotoBold;
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  padding: 0;
+  font-weight: normal;
+  font-size: 28px;
+  @include RobotoMedium;
+}
+
+h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  padding: 0;
+  font-weight: normal;
+  font-size: 24px;
+  @include RobotoMedium;
+}
+
+h4 {
+}
+
+.text {
+  &-center {
+    text-align: center
+  }
+  &-left {
+    text-align: left
+  }
+  &-right {
+    text-align: right
+  }
+  &-justify {
+    text-align: justify
+  }
+  &-bold {
+    font-weight: 700;
+    @include RobotoBold;
+  }
+  &-nowrap {
+    white-space: nowrap;
+  }
+  &-lowercase {
+    text-transform: lowercase;
+  }
+  &-uppercase {
+    text-transform: uppercase;
+  }
+  &-capitalize {
+    text-transform: capitalize;
+  }
+}
+
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+.list {
+  &-unstyled {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+  }
+}
+
+.clearfix {
+  @include clearfix;
+}
+
+.title {
+  font-size: 33px;
+  font-weight: normal;
+  text-transform: uppercase;
+  @include RobotoBold;
+}

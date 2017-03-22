@@ -1,0 +1,29 @@
+.logo {
+  display: flex;
+  align-items: center;
+  &:hover {
+    color: #e3f0fb;
+    img {
+      opacity: .9;
+    }
+  }
+  img {
+    width: 78px;
+    margin-right: 14px;
+    transition: all 0.3s ease;
+  }
+}
+
+.logo-caption {
+  padding-top: 5px;
+  font-size: 28px;
+  @include ProximaNovaBold;
+}
+
+.logo-text {
+  top: -5px;
+  position: relative;
+  text-transform: uppercase;
+  font-size: 13px;
+  @include ProximaNovaSemibold;
+}

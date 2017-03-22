@@ -1,0 +1,52 @@
+button, input {
+  &:focus,
+  &:active {
+    outline-color: transparent;
+  }
+}
+
+.btn {
+  border: 0;
+  background: transparent;
+  text-align: center;
+  cursor: pointer;
+  line-height: 1;
+  display: inline-block;
+  transition: all .3s ease;
+  &-blue {
+    padding: 17px 31px;
+    background-color: #4f8ad9;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    border: 3px solid transparent;
+    @include RobotoBold;
+    &:hover {
+      border-color: #4f8ad9;
+      background-color: #ffffff;
+      color: #4f8ad9;
+      .arrow-right {
+        fill: #4f8ad9;
+      }
+    }
+  }
+  &-transparent {
+    padding: 17px 28px;
+    background-color: #ffffff;
+    color: #4f8ad9;
+    font-size: 15px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    border: 3px solid #4f8ad9;
+    box-shadow: 0 8px 12px 0 rgba(79, 138, 217, 0.25);
+    @include RobotoBold;
+    &:hover, &:active {
+      background-color: #4f8ad9;
+      color: #ffffff;
+    }
+    &:active, &:disabled {
+      box-shadow: none;
+    }
+  }
+}

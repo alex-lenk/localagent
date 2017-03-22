@@ -1,0 +1,28 @@
+.partners {
+  padding-top: 65px;
+  padding-bottom: 115px;
+}
+
+.partners-hint {
+  margin-bottom: 65px;
+  font-size: 15px;
+  color: #6ba0b2;
+  text-align: right;
+  font-style: italic;
+  .move {
+    margin: 2px 0 0 10px;
+    width: 24px;
+    height: 27px;
+    fill: #4f8ad9;
+    vertical-align: bottom;
+  }
+}
+
+.partners-carousel {
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+  img {
+    max-width: 190px;
+  }
+}
