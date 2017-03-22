@@ -1,11 +1,14 @@
 .partners {
   padding-top: 65px;
   padding-bottom: 115px;
+  @include to('l') {
+    padding-bottom: 90px;
+  }
 }
 
 .partners-hint {
   margin-bottom: 65px;
-  font-size: 15px;
+  font-size: 16px;
   color: #6ba0b2;
   text-align: right;
   font-style: italic;

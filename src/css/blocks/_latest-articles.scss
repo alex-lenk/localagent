@@ -1,15 +1,22 @@
 .latest-articles {
   padding: 103px 0 75px;
   background-color: #f9fbff;
+  @include to('l') {
+    padding: 97px 0 75px;
+  }
+  @include from('xl') {
+    .col-md-4 {
+      padding: 0 25px;
+    }
+    img {
+      max-height: 196px;
+    }
+  }
   .title {
     text-align: center;
     margin-bottom: 95px;
   }
-  .col-md-4 {
-    padding: 0 25px;
-  }
   img {
-    max-height: 196px;
     transition: all 0.3s ease;
   }
 }
@@ -32,6 +39,11 @@
   display: inline-block;
   font-size: 16px;
   @include RobotoMedium;
+  @include to('l') {
+    padding: 20px 0 13px;
+    line-height: 1.2;
+    min-height: 71px;
+  }
 }
 
 .latest-articles-text {
@@ -43,6 +55,9 @@
   color: #b0aaaa;
   font-size: 15px;
   @include Rubik;
+  @include to('l') {
+    font-size: 14px;
+  }
 }
 
 .latest-articles-all {

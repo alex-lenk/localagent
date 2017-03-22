@@ -1,6 +1,9 @@
 .logo {
-  display: flex;
-  align-items: center;
+  overflow: hidden;
+  @include from('xl') {
+    display: flex;
+    align-items: center;
+  }
   &:hover {
     color: #e3f0fb;
     img {
@@ -11,6 +14,10 @@
     width: 78px;
     margin-right: 14px;
     transition: all 0.3s ease;
+    @include to('l') {
+      width: 70px;
+      float: left;
+    }
   }
 }
 
@@ -18,6 +25,11 @@
   padding-top: 5px;
   font-size: 28px;
   @include ProximaNovaBold;
+  @include to('l') {
+    font-size: 25px;
+    display: block;
+    padding-top: 11px;
+  }
 }
 
 .logo-text {
@@ -26,4 +38,7 @@
   text-transform: uppercase;
   font-size: 13px;
   @include ProximaNovaSemibold;
+  @include to('l') {
+    font-size: 11.65px;
+  }
 }

@@ -2,6 +2,9 @@ header {
   padding-top: 33px;
   position: relative;
   color: #ffffff;
+  @include to('l') {
+    padding-top: 37px;
+  }
   a {
     color: #ffffff;
   }
@@ -37,6 +40,10 @@ header {
   padding-right: 15%;
   text-align: center;
   clear: both;
+  @include to('l') {
+    padding-left: 9%;
+    padding-right: 9%;
+  }
 }
 
 .header-title {

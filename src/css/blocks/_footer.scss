@@ -71,12 +71,25 @@ footer {
   margin: 45px 0 0;
   text-align: center;
   font-size: 0;
+  @include to('l') {
+    margin-top: 37px;
+    padding-left: 65px;
+    text-align: left;
+  }
   li {
     display: inline-block;
     vertical-align: top;
     font-size: 17px;
-    &:not(:first-of-type):not(:last-of-type) {
-      margin: 0 15px;
+    @include from('xl') {
+      &:not(:first-of-type):not(:last-of-type) {
+        margin: 0 15px;
+      }
+    }
+    @include to('l') {
+      width: 45%;
+      &:first-of-type {
+        margin-bottom: 22px;
+      }
     }
   }
   a {
@@ -93,6 +106,9 @@ footer {
   padding-top: 42px;
   text-align: right;
   position: relative;
+  @include to('l') {
+    padding-top: 37px;
+  }
   .btn {
     position: absolute;
     right: 17px;
@@ -123,10 +139,6 @@ footer {
     color: #ffffff;
     font-size: 16px;
   }
-  &:-moz-placeholder {
-    color: #ffffff;
-    font-size: 16px;
-  }
   &:-ms-input-placeholder {
     color: #ffffff;
     font-size: 16px;
@@ -138,12 +150,17 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @include to('l') {
+    padding-top: 12px;
+  }
 }
 
 .copyright {
   font-size: 15px;
-  padding-left: 42px;
   margin-top: 5px;
+  @include from('xl') {
+    padding-left: 42px;
+  }
 }
 
 .social {
@@ -175,11 +192,5 @@ footer {
     height: 20px;
     fill: #c0b7b7;
     transition: all 0.3s ease;
-  }
-  .ok {
-  }
-  .fb {
-  }
-  .vk {
   }
 }

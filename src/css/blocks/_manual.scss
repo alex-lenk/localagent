@@ -1,6 +1,9 @@
 .manual {
   padding-top: 15px;
   padding-bottom: 152px;
+  @include to('l') {
+    padding-bottom: 180px;
+  }
   .title {
     margin-bottom: 17px;
     text-align: center;
@@ -19,45 +22,76 @@
 
 .manual-step-one {
   padding-bottom: 67px;
+  @include to('l') {
+    padding-bottom: 100px;
+  }
   .manual-media::before {
     right: 150px;
     content: '1';
+    @include to('l') {
+      right: 100px;
+    }
   }
   .manual-media-img {
     max-width: 364px;
+    @include to('l') {
+      max-width: 343px;
+    }
   }
 }
 
 .manual-step-two {
   padding: 122px 0 152px;
   background: url(../img/top-decor-line.png) no-repeat top center, url(../img/bottom-decor-line.png) no-repeat bottom center;
-  .manual-text {
-    padding-left: 47px;
-    padding-right: 60px;
+  @include to('l') {
+    padding-top: 150px;
+    padding-bottom: 178px;
+  }
+  @include from('xl') {
+    .manual-text {
+      padding-left: 47px;
+      padding-right: 60px;
+    }
   }
   .manual-media {
     text-align: center;
     &::before {
       left: 21px;
       content: '2';
+      @include to('l') {
+        left: 30px;
+      }
     }
   }
   .manual-media-map {
     max-width: 487px;
     box-shadow: 0 0 45px 0 rgba(0, 0, 0, 0.2);
+    @include to('l') {
+      max-width: 412px;
+      margin-left: 42px;
+    }
   }
 }
 
 .manual-step-three {
   padding-top: 60px;
+  @include to('l') {
+    padding-top: 71px;
+  }
   .manual-media {
     &::before {
       right: 68px;
       content: '3';
+      @include to('l') {
+        right: 39px;
+      }
     }
   }
   .manual-media-img {
     max-width: 442px;
+    @include to('l') {
+      max-width: 404px;
+    }
   }
 }
 
@@ -83,13 +117,20 @@
 
 .manual-media-img {
   float: left;
-  margin-left: 32px;
   box-shadow: 0 0 45px 0 rgba(0, 0, 0, 0.2);
+  @include from('xl') {
+    margin-left: 32px;
+  }
 }
 
 .manual-media-phone {
   width: 167px;
   margin: 114px 0 0 -79px;
+  @include to('l') {
+    position: absolute;
+    width: 158px;
+    margin: 107px 0 0 -77px;
+  }
 }
 
 .manual-media-map {
@@ -102,10 +143,16 @@
   h2 {
     margin-bottom: 29px;
     padding-top: 28px;
+    @include to('l') {
+      line-height: 1.2;
+    }
   }
   p {
     line-height: 1.3;
     font-size: 18px;
+    @include to('l') {
+      line-height: 1.2;
+    }
   }
   .arrow-right {
     width: 20px;
@@ -117,27 +164,3 @@
     margin-top: 1px;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

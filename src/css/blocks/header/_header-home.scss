@@ -4,6 +4,9 @@
   background: url(../img/bg-home-header.jpg) no-repeat left top;
   .header-center {
     padding-top: 175px;
+    @include to('l') {
+      padding-top: 180px;
+    }
   }
   .header-title {
     margin-bottom: 25px;

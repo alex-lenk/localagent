@@ -3,6 +3,9 @@
   color: #ffffff;
   text-align: center;
   background: url(../img/bg-statistics.jpg) no-repeat right top;
+  @include to('l') {
+    background-size: cover;
+  }
   .title {
     margin-bottom: 91px;
   }

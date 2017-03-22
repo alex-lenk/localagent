@@ -14,21 +14,17 @@ $(document).ready(function () {
         grabCursor: true,
         slidesPerView: 5,
         breakpoints: {
-            1024: {
-                slidesPerView: 4,
-                spaceBetween: 40
+            1199: {
+                slidesPerView: 4
             },
-            768: {
-                slidesPerView: 3,
-                spaceBetween: 30
+            991: {
+                slidesPerView: 3
             },
-            640: {
-                slidesPerView: 2,
-                spaceBetween: 20
+            767: {
+                slidesPerView: 2
             },
             320: {
-                slidesPerView: 1,
-                spaceBetween: 10
+                slidesPerView: 1
             }
         }
     });
