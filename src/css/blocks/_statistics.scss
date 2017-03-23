@@ -3,8 +3,14 @@
   color: #ffffff;
   text-align: center;
   background: url(../img/bg-statistics.jpg) no-repeat right top;
+  overflow: hidden;
   @include to('l') {
     background-size: cover;
+  }
+  @include at('m') {
+    .swiper-slide {
+      max-width: 320px;
+    }
   }
   .title {
     margin-bottom: 91px;

@@ -48,6 +48,9 @@ h2 {
   font-weight: normal;
   font-size: 28px;
   @include RobotoMedium;
+  @include to('m') {
+    font-size: 26px;
+  }
 }
 
 h3 {
@@ -114,8 +117,11 @@ h4 {
 }
 
 .title {
-  font-size: 33px;
+  font-size: 30px;
   font-weight: normal;
   text-transform: uppercase;
   @include RobotoBold;
+  @include from('l') {
+    font-size: 33px;
+  }
 }

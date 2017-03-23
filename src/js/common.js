@@ -28,4 +28,10 @@ $(document).ready(function () {
             }
         }
     });
+
+    var statisticsCarousel = new Swiper('.statistics-carousel', {
+        grabCursor: true,
+        slidesPerView: 2,
+        spaceBetween: 30
+    });
 });

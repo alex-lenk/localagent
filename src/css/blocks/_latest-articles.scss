@@ -4,6 +4,9 @@
   @include to('l') {
     padding: 97px 0 75px;
   }
+  @include to('m') {
+    padding: 70px 0 75px;
+  }
   @include from('xl') {
     .col-md-4 {
       padding: 0 25px;
@@ -15,6 +18,9 @@
   .title {
     text-align: center;
     margin-bottom: 95px;
+    @include to('m') {
+      margin-bottom: 65px;
+    }
   }
   img {
     transition: all 0.3s ease;
@@ -42,6 +48,8 @@
   @include to('l') {
     padding: 20px 0 13px;
     line-height: 1.2;
+  }
+  @include at('l') {
     min-height: 71px;
   }
 }

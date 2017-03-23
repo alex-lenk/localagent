@@ -18,6 +18,9 @@
   text-align: center;
   text-transform: uppercase;
   font-size: 16px;
+  @include to('m') {
+    margin-bottom: 112px;
+  }
 }
 
 .manual-step-one {
@@ -31,11 +34,17 @@
     @include to('l') {
       right: 100px;
     }
+    @include to('m') {
+      right: 56px;
+    }
   }
   .manual-media-img {
     max-width: 364px;
     @include to('l') {
       max-width: 343px;
+    }
+    @include to('m') {
+      max-width: 278px;
     }
   }
 }
@@ -61,6 +70,9 @@
       @include to('l') {
         left: 30px;
       }
+      @include to('m') {
+        left: -12px;
+      }
     }
   }
   .manual-media-map {
@@ -69,6 +81,10 @@
     @include to('l') {
       max-width: 412px;
       margin-left: 42px;
+    }
+    @include to('m') {
+      max-width: 345px;
+      margin-left: 0;
     }
   }
 }
@@ -85,12 +101,18 @@
       @include to('l') {
         right: 39px;
       }
+      @include to('m') {
+        right: 0;
+      }
     }
   }
   .manual-media-img {
     max-width: 442px;
     @include to('l') {
       max-width: 404px;
+    }
+    @include to('m') {
+      max-width: 332px;
     }
   }
 }
@@ -131,6 +153,10 @@
     width: 158px;
     margin: 107px 0 0 -77px;
   }
+  @include to('m') {
+    width: 131px;
+    margin: 86px 0 0 -62px;
+  }
 }
 
 .manual-media-map {
@@ -139,19 +165,27 @@
 }
 
 .manual-text {
-  padding-right: 0;
+  @include from('l') {
+    padding-right: 0;
+  }
   h2 {
     margin-bottom: 29px;
     padding-top: 28px;
     @include to('l') {
       line-height: 1.2;
     }
+    @include to('m') {
+      margin-bottom: 16px;
+      padding-top: 10px;
+    }
   }
   p {
     line-height: 1.3;
-    font-size: 18px;
     @include to('l') {
       line-height: 1.2;
+    }
+    @include from('l') {
+      font-size: 18px;
     }
   }
   .arrow-right {

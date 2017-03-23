@@ -4,6 +4,10 @@
   @include to('l') {
     padding-bottom: 90px;
   }
+  @include to('m') {
+    padding-top: 45px;
+    padding-bottom: 140px;
+  }
 }
 
 .partners-hint {

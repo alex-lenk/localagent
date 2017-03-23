@@ -4,6 +4,9 @@ footer {
   position: relative;
   color: #ffffff;
   background: url(../img/bg-footer-img.jpg) no-repeat left top;
+  @include to('m') {
+    background-size: cover;
+  }
   a {
     color: #ffffff;
   }
@@ -71,21 +74,30 @@ footer {
   margin: 45px 0 0;
   text-align: center;
   font-size: 0;
+  list-style: none;
   @include to('l') {
     margin-top: 37px;
     padding-left: 65px;
     text-align: left;
   }
+  @include to('m') {
+    margin-top: 4px;
+    padding-left: 76px;
+  }
   li {
-    display: inline-block;
-    vertical-align: top;
+    margin-bottom: 15px;
     font-size: 17px;
     @include from('xl') {
       &:not(:first-of-type):not(:last-of-type) {
         margin: 0 15px;
       }
     }
-    @include to('l') {
+    @include from('l') {
+      margin-bottom: 0;
+      display: inline-block;
+      vertical-align: top;
+    }
+    @include at('l') {
       width: 45%;
       &:first-of-type {
         margin-bottom: 22px;
@@ -131,6 +143,10 @@ footer {
   border: 1px solid transparent;
   border-bottom-color: #ffffff;
   font-size: 16px;
+  @include to('m') {
+    min-width: 219px;
+    padding-left: 5px;
+  }
   &::-webkit-input-placeholder {
     color: #ffffff;
     font-size: 16px;
@@ -152,6 +168,10 @@ footer {
   align-items: center;
   @include to('l') {
     padding-top: 12px;
+  }
+  @include to('m') {
+    padding-top: 0;
+    margin-top: -25px;
   }
 }
 
@@ -180,6 +200,10 @@ footer {
     display: inline-flex;
     justify-content: center;
     align-items: center;
+    @include to('m') {
+      width: 39px;
+      height: 39px;
+    }
     &:hover {
       background-color: #c0b7b7;
       .ok, .fb, .vk {
@@ -192,5 +216,9 @@ footer {
     height: 20px;
     fill: #c0b7b7;
     transition: all 0.3s ease;
+    @include to('m') {
+      width: 19px;
+      height: 19px;
+    }
   }
 }
