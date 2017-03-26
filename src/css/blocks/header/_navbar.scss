@@ -47,10 +47,10 @@
   }
   a {
     border-bottom: 1px solid transparent;
-    &:hover {
-      border-bottom-color: #ffffff;
-      color: #ffffff;
-    }
+  }
+  a:hover, .current a, .current span {
+    border-bottom-color: #ffffff;
+    color: #ffffff;
   }
 }
 
