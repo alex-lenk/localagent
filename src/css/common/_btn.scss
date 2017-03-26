@@ -14,6 +14,15 @@
     border-radius: 30px;
     text-transform: uppercase;
     @include RobotoBold;
+    .arrow-right {
+      width: 20px;
+      height: 12px;
+      margin-left: 8px;
+      fill: #fff;
+      display: inline-block;
+      vertical-align: top;
+      margin-top: 1px;
+    }
     &:hover {
       color: #fff;
       background-color: #a7c343;

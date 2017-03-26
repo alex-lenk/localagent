@@ -1,0 +1,44 @@
+.about-advantages {
+  padding-top: 35px;
+  @include from('m') {
+    padding-top: 20px;
+  }
+  @include from('l') {
+    padding-top: 40px;
+  }
+  @include at('m') {
+    .col-sm-6 {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+  @include to('s') {
+    .col-sm-6:not(.about-advantages-last) {
+      margin-bottom: 45px;
+    }
+  }
+}
+
+.about-advantages-title {
+  margin-bottom: 35px;
+  @include from('m') {
+    margin-bottom: 65px;
+  }
+}
+
+.about-advantages-text {
+  margin-bottom: 0;
+  line-height: 1.2;
+  font-size: 16px;
+}
+
+.about-advantages-last {
+  padding-top: 45px;
+}
+
+.about-advantages-bottom {
+  padding-top: 55px;
+  @include from('l') {
+    padding-top: 70px;
+  }
+}

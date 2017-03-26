@@ -48,9 +48,16 @@
   a {
     border-bottom: 1px solid transparent;
   }
-  a:hover, .current a, .current span {
-    border-bottom-color: #ffffff;
-    color: #ffffff;
+  @include from('m') {
+    a:hover, .current a, .current span {
+      border-bottom-color: #ffffff;
+      color: #ffffff;
+    }
+  }
+  @include to('s') {
+    a:hover, .current a {
+      color: #4f8ad9;
+    }
   }
 }
 
@@ -61,7 +68,6 @@
   right: 15px;
   width: 100%;
   padding-top: 60px;
-  overflow: hidden;
   text-align: center;
   padding-bottom: 32px;
   font-size: 18px;
@@ -90,6 +96,7 @@
     z-index: 5;
     content: '';
     border-radius: 7px;
+    box-shadow: 0 0 35px 0 rgba(#000, .18);
   }
   &::after {
     width: 0;
