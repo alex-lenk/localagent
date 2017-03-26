@@ -19,36 +19,4 @@
       padding-top: 74px;
     }
   }
-  .header-title {
-    margin-bottom: 25px;
-    @include to('s') {
-      font-size: 7vw;
-    }
-    @include to('xs') {
-      margin-bottom: 9px;
-    }
-  }
-  .intro-text {
-    margin-bottom: 105px;
-    @include to('xs') {
-      margin-bottom: 39px;
-    }
-  }
-
-  @include to('s') {
-    .logo {
-      width: 230px;
-    }
-    .logo-wrap img {
-      width: 62px;
-    }
-    .logo-caption {
-      font-size: 22px;
-    }
-    .logo-text {
-      font-size: 10px;
-      display: block;
-      top: 5px;
-    }
-  }
 }

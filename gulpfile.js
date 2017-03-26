@@ -120,7 +120,7 @@ gulp.task('css:build', function () {
         }).on('error', sass.logError)) //Скомпилируем
         .pipe(gulp.dest(path.build.css)) //И в build
         .pipe(autoprefixer({
-            browsers: ['last 5 versions'],
+            browsers: ['last 15 versions'],
             cascade: false
         })) //Добавим вендорные префиксы
         .pipe(sourcemaps.write(path.build.maps, {

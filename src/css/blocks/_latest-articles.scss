@@ -16,7 +16,6 @@
   }
   img {
     max-height: 222px;
-    transition: all 0.3s ease;
     @include to('xs') {
       display: none;
     }
@@ -30,7 +29,6 @@
     justify-content: space-between;
   }
   li {
-    overflow: hidden;
     @include from('l') {
       flex-basis: 33%;
       max-width: 33%;
@@ -49,12 +47,19 @@
   }
 }
 
+.latest-articles-media {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  transition: all 0.3s ease;
+}
+
 .latest-articles-link {
   &:not(:hover) {
     color: #505b6a;
   }
-  &:hover img {
-    transform: scale(1.1);
+  &:hover .latest-articles-media {
+    opacity: .8;
   }
 }
 
@@ -103,6 +108,9 @@
       border-bottom: 1px solid;
       display: inline-block;
     }
+    &:hover .arrow-right {
+      fill: #4f8ad9;
+    }
   }
   .arrow-right {
     width: 20px;
@@ -110,6 +118,7 @@
     fill: #6ba0b2;
     vertical-align: middle;
     margin: -3px 0 0 5px;
+    transition: all 0.3s ease;
   }
   @include RobotoBold;
 }

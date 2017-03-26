@@ -57,13 +57,20 @@
     }
     @include to('s') {
       width: 100%;
-      margin-right: 20%;
-      margin-bottom: 35px;
-      padding-left: 15px;
+      max-width: 414px;
+      margin: 0 auto 35px;
+      padding-right: 50px;
+    }
+    @include to('xs') {
+      width: 100%;
+      max-width: 257px;
     }
     &::before {
       right: -25px;
       content: '1';
+      @include at('s') {
+        right: 25px;
+      }
     }
   }
   .manual-text {
@@ -71,8 +78,12 @@
     @include to('l') {
       width: 450px;
     }
-    @include to('m') {
+    @include at('m') {
       width: 345px;
+    }
+    @include to('s') {
+      max-width: 414px;
+      margin: 0 auto;
     }
   }
 }
@@ -100,20 +111,29 @@
       width: 455px;
       margin: 0 33px 0 0;
     }
+    @include at('m') {
+      max-width: 340px;
+    }
     @include to('s') {
       order: 2;
+      max-width: 414px;
+      margin: auto;
     }
   }
   .manual-media {
     width: 485px;
     text-align: center;
-    @include to('l') {
+    @include at('l') {
       width: 415px;
     }
-    @include to('s') {
-      width: 100%;
-      margin-bottom: 35px;
+    @include at('m') {
+      width: 345px;
       padding: 0 18px;
+    }
+    @include to('s') {
+      max-width: 414px;
+      width: 100%;
+      margin: 0 auto 35px;
     }
     &::before {
       left: -27px;
@@ -142,10 +162,14 @@
     @include from('m') {
       margin: 0 78px 0 0;
     }
+    @include at('m') {
+      width: 330px;
+      margin-right: 45px;
+    }
     @include to('s') {
       width: 100%;
-      margin: 0 0 35px;
-      padding: 0 18px;
+      max-width: 414px;
+      margin: 0 auto 35px;
     }
     @include from('xl') {
       margin: 0 95px 0 32px;
@@ -163,6 +187,13 @@
     width: 530px;
     @include to('l') {
       width: 450px;
+    }
+    @include at('m') {
+      width: 340px;
+    }
+    @include to('s') {
+      max-width: 414px;
+      margin: 0 auto;
     }
   }
 }
@@ -214,6 +245,11 @@
   @include to('s') {
     width: auto;
     height: 64%;
+    right: -3px;
+  }
+  @include to('xs') {
+    height: 77%;
+    right: -63px;
   }
 }
 

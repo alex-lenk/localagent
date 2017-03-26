@@ -13,8 +13,20 @@
     }
   }
   @include to('s') {
-    .col-sm-6:not(.about-advantages-last) {
-      margin-bottom: 45px;
+    .col-sm-6 {
+      max-width: 345px;
+      margin: 0 auto;
+      float: none;
+      &:not(.about-advantages-last) {
+        margin-bottom: 45px;
+      }
+    }
+  }
+  img {
+    max-height: 215px;
+    transition: all 0.3s ease;
+    &:hover {
+      transform: scale(1.1);
     }
   }
 }
@@ -32,8 +44,10 @@
   font-size: 16px;
 }
 
-.about-advantages-last {
-  padding-top: 45px;
+@include at('m') {
+  .about-advantages-last {
+    padding-top: 45px;
+  }
 }
 
 .about-advantages-bottom {

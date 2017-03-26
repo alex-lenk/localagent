@@ -84,16 +84,17 @@
   border-radius: 33px 0 0 33px;
   position: relative;
   z-index: 10;
+  color: #505b6a;
+  font-size: 16px;
+  font-weight: normal;
+  @include RobotoLight;
   &::-webkit-input-placeholder {
-    font-size: 16px;
     color: #c0b7b7;
   }
   &::-moz-placeholder {
-    font-size: 16px;
     color: #c0b7b7;
   }
   &:-ms-input-placeholder {
-    font-size: 16px;
     color: #c0b7b7;
   }
 }

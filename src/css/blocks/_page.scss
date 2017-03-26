@@ -1,0 +1,57 @@
+.page {
+  header {
+    padding-bottom: 55px;
+    @include from('m') {
+      padding-bottom: 105px;
+    }
+    &:after {
+      height: 127px;
+      @include to('s') {
+        height: 50px;
+      }
+    }
+  }
+  .header-center {
+    padding-top: 93px;
+    @include to('l') {
+      padding-top: 60px;
+    }
+    @include to('xs') {
+      padding-top: 35px;
+    }
+  }
+
+  .faq {
+    padding-top: 5px;
+    padding-bottom: 70px;
+  }
+
+  .latest-articles {
+    position: relative;
+    z-index: 10;
+    &:after {
+      background: url(../img/bg-footer-decor.png) no-repeat top center;
+      width: 100%;
+      height: 99px;
+      background-size: cover;
+      content: '';
+      position: absolute;
+      bottom: -99px;
+      left: 0;
+      z-index: 6;
+      @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+      only screen and (min-resolution: 144dpi),
+      only screen and (min--moz-device-pixel-ratio: 1.5) {
+        background: url(../img/bg-footer-decor@x2.png) no-repeat top center;
+      }
+    }
+  }
+
+  footer::after {
+    background: url(../img/bg-footer-decor-pages.png) no-repeat top center;
+  }
+
+  .footer-find-agent {
+    display: none;
+  }
+}

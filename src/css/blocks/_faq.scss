@@ -1,3 +1,24 @@
+.header-faq {
+  background-image: url(../img/bg-faq.jpg);
+  background-repeat: no-repeat;
+  background-size: 106% auto;
+  background-position: -5vw -12vw;
+  &::before {
+    opacity: .8;
+  }
+  @include to('l') {
+    background-position: 0 -10vw;
+  }
+  @include to('m') {
+    background-size: 125% auto;
+    background-position: -8vw -12vw;
+  }
+  @include to('xs') {
+    background-size: 160% auto;
+    background-position: -5vw 0
+  }
+}
+
 .faq {
   padding-top: 120px;
   padding-bottom: 35px;
@@ -50,6 +71,10 @@
     &:hover {
       color: #4f8ad9;
     }
+    &::after {
+      opacity: 1;
+      visibility: visible;
+    }
   }
 }
 
@@ -69,6 +94,26 @@
   }
   @include to('s') {
     padding-left: 40px;
+  }
+  &::before, &::after {
+    background-color: #4f8ad9;
+    border-radius: 11px;
+    content: '';
+    position: absolute;
+  }
+  &::before {
+    top: 37px;
+    left: 0;
+    width: 21px;
+    height: 2px;
+  }
+  &::after {
+    top: 28px;
+    left: 10px;
+    width: 2px;
+    height: 21px;
+    opacity: 0;
+    visibility: hidden;
   }
 }
 

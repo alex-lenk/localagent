@@ -115,14 +115,13 @@ footer {
   margin: 43px 0 0;
   font-size: 0;
   list-style: none;
-  padding-left: 52px;
-  @include to('l') {
+  @include from('l') {
     margin-top: 37px;
     padding-left: 65px;
   }
   @include at('m') {
     margin-top: 4px;
-    padding-left: 76px;
+    padding-left: 55px;
   }
   @include at('l') {
     padding-right: 60px;
@@ -130,8 +129,10 @@ footer {
     flex-wrap: wrap;
   }
   @include to('s') {
-    margin: 0 0 35px;
-    padding-left: 15px;
+    max-width: 414px;
+    margin: 0 auto 35px;
+    float: none;
+    clear: both;
     display: flex;
     justify-content: space-around;
   }
@@ -199,7 +200,7 @@ footer {
   }
   .letter {
     width: 28px;
-    height: 19px;
+    height: 17px;
     fill: #ffffff;
   }
 }
@@ -210,6 +211,7 @@ footer {
   border: 1px solid transparent;
   border-bottom-color: #ffffff;
   font-size: 16px;
+  color: #ffffff;
   @include from('l') {
     min-width: 295px;
   }

@@ -1,10 +1,6 @@
 .header-about {
-  padding-bottom: 55px;
   background: url(../img/bg-about-us.jpg) no-repeat 0 0;
   background-size: cover;
-  @include from('m') {
-    padding-bottom: 105px;
-  }
   @include between('m', 'l') {
     background-position: 40% 0;
   }
@@ -15,52 +11,5 @@
   &::before {
     opacity: .7;
     background-position: 0 0;
-  }
-  &:after {
-    height: 127px;
-    @include to('s') {
-      height: 50px;
-    }
-  }
-  .header-center {
-    padding-top: 93px;
-    @include to('l') {
-      padding-top: 180px;
-    }
-    @include to('xs') {
-      padding-top: 35px;
-    }
-  }
-  .header-title {
-    margin-bottom: 25px;
-    @include to('s') {
-      font-size: 6.8vw;
-    }
-    @include to('xs') {
-      margin-bottom: 9px;
-    }
-  }
-  .intro-text {
-    margin-bottom: 105px;
-    @include to('xs') {
-      margin-bottom: 39px;
-    }
-  }
-
-  @include to('s') {
-    .logo {
-      width: 230px;
-    }
-    .logo-wrap img {
-      width: 62px;
-    }
-    .logo-caption {
-      font-size: 22px;
-    }
-    .logo-text {
-      font-size: 10px;
-      display: block;
-      top: 5px;
-    }
   }
 }
