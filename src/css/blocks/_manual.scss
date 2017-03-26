@@ -1,8 +1,15 @@
 .manual {
   padding-top: 15px;
-  padding-bottom: 152px;
+  padding-bottom: 143px;
   @include to('l') {
     padding-bottom: 180px;
+  }
+  @include to('s') {
+    padding-bottom: 111px;
+  }
+  .container {
+    display: flex;
+    flex-wrap: wrap;
   }
   .title {
     margin-bottom: 17px;
@@ -21,98 +28,141 @@
   @include to('m') {
     margin-bottom: 112px;
   }
+  @include to('s') {
+    margin-bottom: 70px;
+  }
 }
 
-.manual-step-one {
-  padding-bottom: 67px;
+.manual-one {
+  padding-bottom: 85px;
   @include to('l') {
     padding-bottom: 100px;
   }
-  .manual-media::before {
-    right: 150px;
-    content: '1';
-    @include to('l') {
-      right: 100px;
+  @include to('s') {
+    padding-bottom: 50px;
+  }
+  .manual-media {
+    @include from('xl') {
+      width: 365px;
+      margin-left: 32px;
+      margin-right: 186px;
     }
-    @include to('m') {
-      right: 56px;
+    @include at('l') {
+      width: 341px;
+      margin-right: 143px;
+    }
+    @include at('m') {
+      width: 278px;
+      margin-right: 94px;
+    }
+    @include to('s') {
+      width: 100%;
+      margin-right: 20%;
+      margin-bottom: 35px;
+      padding-left: 15px;
+    }
+    &::before {
+      right: -25px;
+      content: '1';
     }
   }
-  .manual-media-img {
-    max-width: 364px;
+  .manual-text {
+    width: 480px;
     @include to('l') {
-      max-width: 343px;
+      width: 450px;
     }
     @include to('m') {
-      max-width: 278px;
+      width: 345px;
     }
   }
 }
 
-.manual-step-two {
+.manual-two {
   padding: 122px 0 152px;
   background: url(../img/top-decor-line.png) no-repeat top center, url(../img/bottom-decor-line.png) no-repeat bottom center;
+  @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (min-resolution: 144dpi),
+  only screen and (min--moz-device-pixel-ratio: 1.5) {
+    background: url(../img/top-decor-line@x2.jpg) no-repeat top center, url(../img/bottom-decor-line@x2.jpg) no-repeat bottom center;
+  }
   @include to('l') {
     padding-top: 150px;
     padding-bottom: 178px;
   }
-  @include from('xl') {
-    .manual-text {
-      padding-left: 47px;
-      padding-right: 60px;
+  @include to('s') {
+    padding-top: 110px;
+    padding-bottom: 120px;
+  }
+  .manual-text {
+    width: 465px;
+    margin: 0 125px 0 32px;
+    @include to('l') {
+      width: 455px;
+      margin: 0 33px 0 0;
+    }
+    @include to('s') {
+      order: 2;
     }
   }
   .manual-media {
+    width: 485px;
     text-align: center;
-    &::before {
-      left: 21px;
-      content: '2';
-      @include to('l') {
-        left: 30px;
-      }
-      @include to('m') {
-        left: -12px;
-      }
-    }
-  }
-  .manual-media-map {
-    max-width: 487px;
-    box-shadow: 0 0 45px 0 rgba(0, 0, 0, 0.2);
     @include to('l') {
-      max-width: 412px;
-      margin-left: 42px;
+      width: 415px;
     }
-    @include to('m') {
-      max-width: 345px;
-      margin-left: 0;
+    @include to('s') {
+      width: 100%;
+      margin-bottom: 35px;
+      padding: 0 18px;
+    }
+    &::before {
+      left: -27px;
+      content: '2';
+      @include to('s') {
+        left: 6px;
+      }
     }
   }
 }
 
-.manual-step-three {
+.manual-three {
   padding-top: 60px;
   @include to('l') {
     padding-top: 71px;
   }
+  @include to('s') {
+    padding-top: 20px;
+  }
   .manual-media {
+    max-width: 445px;
+    margin: 0 110px 0 32px;
+    @include to('l') {
+      max-width: 407px;
+    }
+    @include from('m') {
+      margin: 0 78px 0 0;
+    }
+    @include to('s') {
+      width: 100%;
+      margin: 0 0 35px;
+      padding: 0 18px;
+    }
+    @include from('xl') {
+      margin: 0 95px 0 32px;
+      max-width: 455px;
+    }
     &::before {
-      right: 68px;
+      right: -29px;
       content: '3';
-      @include to('l') {
-        right: 39px;
-      }
-      @include to('m') {
-        right: 0;
+      @include to('s') {
+        right: 6px;
       }
     }
   }
-  .manual-media-img {
-    max-width: 442px;
+  .manual-text {
+    width: 530px;
     @include to('l') {
-      max-width: 404px;
-    }
-    @include to('m') {
-      max-width: 332px;
+      width: 450px;
     }
   }
 }
@@ -120,42 +170,50 @@
 .manual-media {
   position: relative;
   @include clearfix;
+  img:not(.manual-media-phone) {
+    box-shadow: 0 0 45px 0 rgba(0, 0, 0, 0.2);
+  }
   &::before {
-    width: 55px;
-    height: 55px;
+    width: 47px;
+    height: 47px;
     position: absolute;
     top: -19px;
     border-radius: 50%;
     font-size: 19px;
     color: #ffffff;
     background-color: #a7c343;
-    box-shadow: 0 0 0 8px rgba(79, 138, 217, 0.06);
     display: flex;
     align-items: center;
     justify-content: center;
     @include RobotoBold;
-  }
-}
-
-.manual-media-img {
-  float: left;
-  box-shadow: 0 0 45px 0 rgba(0, 0, 0, 0.2);
-  @include from('xl') {
-    margin-left: 32px;
+    @include from('m') {
+      width: 55px;
+      height: 55px;
+      box-shadow: 0 0 0 8px rgba(79, 138, 217, 0.06);
+    }
+    @include to('s') {
+      box-shadow: 0 0 0 6px rgba(79, 138, 217, 0.06);
+    }
   }
 }
 
 .manual-media-phone {
   width: 167px;
-  margin: 114px 0 0 -79px;
+  position: absolute;
+  right: -88px;
+  bottom: -17px;
+  box-shadow: none;
   @include to('l') {
-    position: absolute;
-    width: 158px;
-    margin: 107px 0 0 -77px;
+    width: 156px;
+    right: -81px;
   }
   @include to('m') {
-    width: 131px;
-    margin: 86px 0 0 -62px;
+    width: 100px;
+    right: -51px;
+  }
+  @include to('s') {
+    width: auto;
+    height: 64%;
   }
 }
 
@@ -167,6 +225,9 @@
 .manual-text {
   @include from('l') {
     padding-right: 0;
+  }
+  @include to('s') {
+    text-align: center;
   }
   h2 {
     margin-bottom: 29px;
@@ -186,6 +247,9 @@
     }
     @include from('l') {
       font-size: 18px;
+    }
+    @include to('s') {
+      text-align: left;
     }
   }
   .arrow-right {

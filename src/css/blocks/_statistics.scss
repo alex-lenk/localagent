@@ -10,18 +10,25 @@
   @include at('m') {
     .swiper-slide {
       max-width: 320px;
+      padding: 0 15px;
     }
+  }
+  @include to('s') {
+    padding: 67px 0 44px;
   }
   .title {
     margin-bottom: 91px;
+    @include to('s') {
+      margin-bottom: 62px;
+    }
   }
 }
 
 .statistics-digits {
-  padding: 7px 27px;
+  padding: 7px 30px;
   margin-bottom: 16px;
   display: inline-block;
-  font-size: 33px;
+  font-size: 31px;
   border-radius: 30px;
   border: 2px solid #a7c343;
   @include RobotoMedium;
@@ -33,11 +40,17 @@
   text-transform: uppercase;
   font-size: 16px;
   line-height: 1.2;
-  @include RobotoRegular
+  @include RobotoRegular;
+  @include to('s') {
+    margin-bottom: 31px;
+  }
 }
 
 .statistics-text {
   margin: 0;
   padding-left: 2px;
   line-height: 1.3;
+  @include to('s') {
+    display: none;
+  }
 }

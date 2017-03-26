@@ -1,8 +1,8 @@
 header {
-  padding-top: 33px;
+  padding-top: 30px;
   position: relative;
   color: #ffffff;
-  @include to('l') {
+  @include at('l') {
     padding-top: 37px;
   }
   a {
@@ -11,13 +11,17 @@ header {
   &::before {
     width: 100%;
     height: 100%;
-    background: url(../img/bg-header.png) no-repeat top center;
+    background: url(../img/bg-header.png) no-repeat 0 0;
+    opacity: .9;
     background-size: cover;
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     z-index: 5;
+    @include to('s') {
+      background-position: 32% 0;
+    }
   }
   &::after {
     width: 100%;
@@ -29,12 +33,19 @@ header {
     bottom: 0;
     left: 0;
     z-index: 6;
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+    only screen and (min-resolution: 144dpi),
+    only screen and (min--moz-device-pixel-ratio: 1.5) {
+      background: url(../img/bg-header-line@x2.png) no-repeat top center;
+    }
   }
   .container {
     position: relative;
     z-index: 7;
   }
 }
+
 .header-center {
   padding-left: 15px;
   padding-right: 15px;
@@ -44,6 +55,7 @@ header {
     padding-left: 9%;
     padding-right: 9%;
   }
+
   @include from('xl') {
     padding-left: 15%;
     padding-right: 15%;

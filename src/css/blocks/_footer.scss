@@ -1,11 +1,35 @@
 footer {
-  padding-top: 158px;
+  padding-top: 159px;
   padding-bottom: 70px;
   position: relative;
   color: #ffffff;
   background: url(../img/bg-footer-img.jpg) no-repeat left top;
-  @include to('m') {
-    background-size: cover;
+  background-size: cover;
+  @include to('xs') {
+    background-position: 49% 100%;
+    background-size: 820%;
+  }
+  @include to('s') {
+    padding-top: 130px;
+    padding-bottom: 45px;
+    .logo {
+      margin-bottom: 40px;
+      text-align: center;
+    }
+    .logo-wrap {
+      display: inline-flex;
+    }
+    img {
+      align-self: flex-start;
+    }
+    .logo-caption {
+      font-size: 26px;
+    }
+    .logo-text {
+      top: 6px;
+      font-size: 12px;
+      display: block;
+    }
   }
   a {
     color: #ffffff;
@@ -26,6 +50,11 @@ footer {
     width: 100%;
     height: 99px;
     background: url(../img/bg-footer-decor.png) no-repeat top center;
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+    only screen and (min-resolution: 144dpi),
+    only screen and (min--moz-device-pixel-ratio: 1.5) {
+      background: url(../img/bg-footer-decor@x2.png) no-repeat top center;
+    }
     background-size: cover;
     content: '';
     position: absolute;
@@ -41,55 +70,77 @@ footer {
 
 .footer-find-agent {
   position: absolute;
-  top: 19px;
+  top: 6px;
   left: 0;
   width: 100%;
   z-index: 9;
-  text-align: center;
 }
 
 .footer-find-agent_link {
-  padding: 16px 29px;
+  width: 280px;
+  padding: 21px 0 18px 34px;
+  text-align: left;
   text-transform: uppercase;
   font-size: 15px;
   color: #4f8ad9;
   border-radius: 30px;
   background-color: #ffffff;
   box-shadow: 0 8px 12px 3px rgba(79, 138, 217, 0.25);
+  display: block;
+  margin: 0 auto;
+  position: relative;
   transition: all 0.3s ease;
   @include RobotoBold;
   &:hover {
-    opacity: .9;
+    background-color: #505b6a;
+    color: #ffffff;
+    .search {
+      fill: #ffffff;
+    }
   }
   .search {
-    width: 18px;
+    width: 21px;
     height: 18px;
-    margin-left: 10px;
     fill: #4f8ad9;
     vertical-align: middle;
+    opacity: 1;
+    position: absolute;
+    top: 17px;
+    right: 34px;
+    transition: all 0.3s ease;
   }
 }
 
 .footer-nav {
-  margin: 45px 0 0;
-  text-align: center;
+  margin: 43px 0 0;
   font-size: 0;
   list-style: none;
+  padding-left: 52px;
   @include to('l') {
     margin-top: 37px;
     padding-left: 65px;
-    text-align: left;
   }
-  @include to('m') {
+  @include at('m') {
     margin-top: 4px;
     padding-left: 76px;
+  }
+  @include at('l') {
+    padding-right: 60px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  @include to('s') {
+    margin: 0 0 35px;
+    padding-left: 15px;
+    display: flex;
+    justify-content: space-around;
   }
   li {
     margin-bottom: 15px;
     font-size: 17px;
     @include from('xl') {
-      &:not(:first-of-type):not(:last-of-type) {
-        margin: 0 15px;
+      &:not(:last-of-type) {
+        margin-right: 31px;
       }
     }
     @include from('l') {
@@ -98,15 +149,23 @@ footer {
       vertical-align: top;
     }
     @include at('l') {
-      width: 45%;
+      &:not(:nth-child(1)):not(:nth-child(3)) {
+        order: 3;
+      }
+      &:nth-child(3) {
+        order: 2;
+      }
       &:first-of-type {
+        margin-right: 68px;
         margin-bottom: 22px;
+      }
+      &:last-of-type {
+        margin-left: 74px;
       }
     }
   }
   a {
-    padding-bottom: 2px;
-    border-bottom: 2px solid transparent;
+    border-bottom: 1px solid transparent;
     &:hover {
       border-bottom-color: #ffffff;
       color: #ffffff;
@@ -121,10 +180,19 @@ footer {
   @include to('l') {
     padding-top: 37px;
   }
+  @include to('s') {
+    max-width: 280px;
+    margin: 0 auto;
+    padding: 0;
+    float: none;
+  }
   .btn {
     position: absolute;
     right: 17px;
     bottom: 10px;
+    @include to('s') {
+      right: 5px;
+    }
     &:hover {
       opacity: .8;
     }
@@ -137,15 +205,21 @@ footer {
 }
 
 .footer-subscribe-input {
-  min-width: 295px;
   padding: 0 0 12px 10px;
   background-color: transparent;
   border: 1px solid transparent;
   border-bottom-color: #ffffff;
   font-size: 16px;
-  @include to('m') {
+  @include from('l') {
+    min-width: 295px;
+  }
+  @include at('m') {
     min-width: 219px;
     padding-left: 5px;
+  }
+  @include to('s') {
+    padding-left: 8px;
+    width: 100%;
   }
   &::-webkit-input-placeholder {
     color: #ffffff;
@@ -164,14 +238,20 @@ footer {
 .footer-bottom {
   padding-top: 35px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  @include from('m') {
+    justify-content: space-between;
+  }
   @include to('l') {
     padding-top: 12px;
   }
-  @include to('m') {
+  @include at('m') {
     padding-top: 0;
     margin-top: -25px;
+  }
+  @include to('s') {
+    padding-top: 44px;
+    flex-direction: column;
   }
 }
 
@@ -180,6 +260,10 @@ footer {
   margin-top: 5px;
   @include from('xl') {
     padding-left: 42px;
+  }
+  @include to('s') {
+    order: 2;
+    margin-top: 38px;
   }
 }
 
@@ -200,12 +284,12 @@ footer {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    @include to('m') {
+    @include at('m') {
       width: 39px;
       height: 39px;
     }
     &:hover {
-      background-color: #c0b7b7;
+      background-color: #505b6a;
       .ok, .fb, .vk {
         fill: #ffffff;
       }
@@ -216,7 +300,7 @@ footer {
     height: 20px;
     fill: #c0b7b7;
     transition: all 0.3s ease;
-    @include to('m') {
+    @include at('m') {
       width: 19px;
       height: 19px;
     }

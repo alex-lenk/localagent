@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
     <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
     <meta content="telephone=no" name="format-detection">
 
@@ -25,8 +25,8 @@
 <header class="header-home">
     <div class="container">
         <div class="row">
-            <div class="col-md-3 col-sm-4">
-                <a href="#" class="logo"><img src="img/logo.png" alt="">
+            <div class="logo col-md-3 col-sm-4 col-xs-10">
+                <a href="#" class="logo-wrap"><img src="img/logo.png" alt="">
                     <span class="logo-caption">LocalAgent
                             <span class="logo-text">Умное страхование</span></span></a>
             </div>
@@ -47,83 +47,193 @@
                 <p class="intro-text">Заполните короткую заявку и получите лучшие предложения от локальных страховых
                     агентов с точным расчетом от надежных страховых компаний </p>
 
-                <form action="#" class="insurance">
+                <form action="#" class="insurance hidden-xs">
                     <ul class="insurance-type">
                         <li class="insurance-type-label">Тип страховки:</li>
                         <li class="current insurance-type-point">КАСКО</li>
                         <li class="insurance-type-point">Осаго</li>
                     </ul>
+
+                    <div class="insurance-search">
+                        <div class="insurance-input-area">
+<!--                                <div class="not-complete-car selected-car">
+                                    <svg class="selected">
+                                        <use xlink:href="img/src.svg#selected"></use>
+                                    </svg>
+                                    Hyundai
+                                    <svg class="down">
+                                        <use xlink:href="img/src.svg#down"></use>
+                                    </svg>
+                                </div>
+                                <div class="not-complete-model selected-model">
+                                    <svg class="selected">
+                                        <use xlink:href="img/src.svg#selected"></use>
+                                    </svg>
+                                    Hyundai
+                                    <svg class="down">
+                                        <use xlink:href="img/src.svg#down"></use>
+                                    </svg>
+                                </div>
+                                <div class="not-complete-year selected-year">
+                                    <svg class="selected">
+                                        <use xlink:href="img/src.svg#selected"></use>
+                                    </svg>
+                                    Hyundai
+                                    <svg class="down">
+                                        <use xlink:href="img/src.svg#down"></use>
+                                    </svg>
+                                </div>-->
+                            <input type="text" class="insurance-input car-brand" placeholder="Марка автомобиля">
+                            <input type="text" class="insurance-input car-model hide" placeholder="Модель автомобиля">
+                            <input type="text" class="insurance-input car-year hide" placeholder="Год автомобиля">
+
+                            <svg class="down">
+                                <use xlink:href="img/src.svg#down"></use>
+                            </svg>
+                        </div>
+
+                        <button class="btn btn-blue">Начать</button>
+                    </div>
+<!--
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+
+                    <div class="wrapper_input">
+                        <div class="input_wrapper ">
+                            <label for="cars_name" class="for_mm">
+                                <input type="text" placeholder="Марка автомобиля" value="" class="cars_name">
+                                <span class="active_arrow"></span>
+                            </label>
+
+                            <label for="cars_model" class="for_mmm">
+                                <input type="text" value="" class="cars_model">
+                                <span class="active_arrow"></span>
+                            </label>
+
+                            <label for="cars_year" class="for_mmmm">
+                                <input type="text" value="" class="cars_year">
+                                <span class="active_arrow"></span></label>
+
+                            <span class="submit_but">НАЧАТЬ</span>
+                        </div>
+
+                        <div class="input_select">
+                            <div class="select_cars firma active_tab">
+                                <ul class="left_select">
+                                    <li><a href="#">Hundai</a></li>
+                                    <li><a href="#">Hundai</a></li>
+                                    <li><a href="#">Hundai</a></li>
+                                    <li><a href="#">Hundai</a></li>
+                                    <li><a href="#">Mers</a></li>
+                                    <li><a href="#">Mers</a></li>
+                                </ul>
+                                <ul class="right-select">
+                                    <li><a href="#">Hundai</a></li>
+                                    <li><a href="#">Hundai</a></li>
+                                    <li><a href="#">Hundai</a></li>
+                                    <li><a href="#">Hundai</a></li>
+                                    <li><a href="#">Mers</a></li>
+                                    <li><a href="#">Mers</a></li>
+                                </ul>
+                            </div>
+                            <div class="select_cars model">
+                                <ul class="left_select">
+                                    <li><a href="#">Santa</a></li>
+                                    <li><a href="#">Santa</a></li>
+                                    <li><a href="#">Santa-fe</a></li>
+                                    <li><a href="#">Santa</a></li>
+                                </ul>
+                                <ul class="right-select">
+                                    <li><a href="#">Santa</a></li>
+                                    <li><a href="#">Santa-fe</a></li>
+                                    <li><a href="#">Santa</a></li>
+                                    <li><a href="#">Santa-fe</a></li>
+                                </ul>
+                            </div>
+                            <div class="select_cars model_year">
+                                <ul class="left_select">
+                                    <li><a href="#">2017</a></li>
+                                    <li><a href="#">2017</a></li>
+                                    <li><a href="#">2012</a></li>
+                                    <li><a href="#">2017</a></li>
+                                </ul>
+                                <ul class="right-select">
+                                    <li><a href="#">2017</a></li>
+                                    <li><a href="#">2017</a></li>
+                                    <li><a href="#">2012</a></li>
+                                    <li><a href="#">2017</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>-->
                 </form>
+
+                <a href="#" class="btn btn-green visible-xs-inline-block">Получить предложения</a>
             </div>
         </div>
     </div>
 </header>
 
 <section class="manual">
-    <div class="manual-step-one container">
-        <div class="row">
-            <div class="col-md-12">
-                <h2 class="title">Как это Работает ?</h2>
-                <p class="manual-pre-title">Просто. Доступно. Надежно.</p>
-            </div>
-            <div class="manual-media col-lg-6 col-md-6 col-sm-6">
-                <img src="img/example-form.jpg" alt="" class="manual-media-img">
-                <img src="img/iphone.png" alt="" class="manual-media-phone">
-            </div>
+    <h2 class="title">Как это Работает ?</h2>
+    <p class="manual-pre-title">Просто. Доступно. Надежно.</p>
+    <div class="manual-one container">
+        <div class="manual-media">
+            <img src="img/example-form.jpg" alt="">
+            <img src="img/iphone.png" alt="" class="manual-media-phone">
+        </div>
 
-            <div class="manual-text col-lg-5 col-md-6 col-sm-6">
-                <h2>Заполняете онлайн-форму</h2>
-                <p>Находитесь в поисках более выгодного предложения по автострахованию? Мы вам поможем!
-                    Просто заполните быструю и удобную онлайн форму
-                </p>
-                <button class="btn btn-blue">
-                    Заполнить Форму
-                    <svg class="arrow-right">
-                        <use xlink:href="img/src.svg#arrow-right"></use>
-                    </svg>
-                </button>
-            </div>
+        <div class="manual-text">
+            <h2>Заполняете онлайн-форму</h2>
+            <p>Находитесь в поисках более выгодного предложения по автострахованию? Мы вам поможем!
+                Просто заполните быструю и удобную онлайн форму
+            </p>
+            <button class="btn btn-blue">
+                Заполнить Форму
+                <svg class="arrow-right">
+                    <use xlink:href="img/src.svg#arrow-right"></use>
+                </svg>
+            </button>
         </div>
     </div>
 
-    <div class="manual-step-two">
+    <div class="manual-two">
         <div class="container">
-            <div class="row">
-                <div class="manual-text col-md-6 col-sm-6">
-                    <h2>Находим подходящих страховых агентов</h2>
-                    <p>После заполнения онлайн формы процесс происходит просто и быстро.<br>
-                        Базируясь на предоставленной Вами информации мы отбираем для вас самых подходящих страховых
-                        агентов по вашему городу.
-                    </p>
-                    <p>Весь процесс займет не более 10 секунд.</p>
-                </div>
-                <div class="manual-media col-md-6 col-sm-6">
-                    <img src="img/map.png" alt="" class="manual-media-map">
+            <div class="manual-text">
+                <h2>Находим подходящих страховых агентов</h2>
+                <p>После заполнения онлайн формы процесс происходит просто и быстро.<br>
+                    Базируясь на предоставленной Вами информации мы отбираем для вас самых подходящих страховых
+                    агентов по вашему городу.
+                </p>
+                <p>Весь процесс займет не более 10 секунд.</p>
+            </div>
 
-                </div>
+            <div class="manual-media">
+                <img src="img/map.png" alt="">
             </div>
         </div>
     </div>
 
-    <div class="manual-step-three container">
-        <div class="row">
-            <div class="manual-media col-md-6 col-sm-6">
-                <img src="img/search-results.jpg" alt="" class="manual-media-img">
-            </div>
+    <div class="manual-three container">
+        <div class="manual-media">
+            <img src="img/search-results.jpg" alt="">
+        </div>
 
-            <div class="manual-text col-md-5 col-sm-6">
-                <h2>Готово!</h2>
-                <p>Мы подобрали для вас лучших локальных страховых агентов. Ожидайте в заранее заданное Вами время
-                    звонков, с лучшими предложениями на рынке страхования.
-                    Получите информацию, сравните условия, цены и примите взвешанное решение.
-                </p>
-                <button class="btn btn-blue">
-                    Найти Агентов
-                    <svg class="arrow-right">
-                        <use xlink:href="img/src.svg#arrow-right"></use>
-                    </svg>
-                </button>
-            </div>
+        <div class="manual-text">
+            <h2>Готово!</h2>
+            <p>Мы подобрали для вас лучших локальных страховых агентов. Ожидайте в заранее заданное Вами время
+                звонков, с лучшими предложениями на рынке страхования.<br>
+                Получите информацию, сравните условия, цены и примите взвешанное решение.
+            </p>
+            <button class="btn btn-blue">
+                Найти Агентов
+                <svg class="arrow-right">
+                    <use xlink:href="img/src.svg#arrow-right"></use>
+                </svg>
+            </button>
         </div>
     </div>
 </section>
@@ -263,7 +373,7 @@
 
 <div class="partners container">
     <div class="partners-hint">
-        Проведите что бы увидеть больше
+        <span class="hidden-xs">Проведите что бы увидеть больше</span>
         <svg class="move">
             <use xlink:href="img/src.svg#move"></use>
         </svg>
@@ -287,36 +397,40 @@
 <section class="latest-articles">
     <div class="container">
         <h2 class="title">Последние статьи</h2>
-        <div class="row">
-            <div class="col-md-4 col-sm-6">
+        <ul class="latest-articles-list list-unstyled">
+            <li>
                 <a href="#" class="latest-articles-link"><img src="img/example/img.jpg" alt="">
                     <span class="latest-articles-title">Как провести анализ устойчивости</span></a>
-                <p class="latest-articles-text">25 декабря 2013 г. представителями комбината «Кривбассжелезрудком»
-                    (г.Кривой Рог) произведены разбузла и осмотр состояния...</p>
+                <div class="latest-articles-text">25 декабря 2013 г. представителями комбината «Кривбассжелезрудком»
+                    (г.Кривой Рог) произведены разбузла и осмотр состояния...
+                </div>
                 <span class="latest-articles-date">22 Марта</span>
-            </div>
-            <div class="col-md-4 col-sm-6">
+            </li>
+            <li>
                 <a href="#" class="latest-articles-link"><img src="img/example/img-2.jpg" alt="">
                     <span class="latest-articles-title">Финансовый учет</span></a>
-                <p class="latest-articles-text">25 декабря 2013 г. представителями комбината «Кривбассжелезрудком»
-                    (г.Кривой Рог) произведены разбузла и осмотр состояния...</p>
+                <div class="latest-articles-text">25 декабря 2013 г. представителями комбината «Кривбассжелезрудком»
+                    (г.Кривой Рог) произведены разбузла и осмотр состояния...
+                </div>
                 <span class="latest-articles-date">16 Марта</span>
-            </div>
-            <div class="col-md-4 hidden-sm hidden-xs">
+            </li>
+            <li class="hidden-sm hidden-xs">
                 <a href="#" class="latest-articles-link"><img src="img/example/img-3.jpg" alt="">
                     <span class="latest-articles-title">Как провести анализ устойчивости</span></a>
-                <p class="latest-articles-text">25 декабря 2013 г. представителями комбината «Кривбассжелезрудком»
-                    (г.Кривой Рог) произведены разбузла и осмотр состояния...</p>
+                <div class="latest-articles-text">25 декабря 2013 г. представителями комбината «Кривбассжелезрудком»
+                    (г.Кривой Рог) произведены разбузла и осмотр состояния...
+                </div>
                 <span class="latest-articles-date">8 Марта</span>
-            </div>
-            <div class="latest-articles-all">
-                <a href="#">
-                    <span class="latest-articles-all_text">Все статьи</span>
-                    <svg class="arrow-right">
-                        <use xlink:href="img/src.svg#arrow-right"></use>
-                    </svg>
-                </a>
-            </div>
+            </li>
+        </ul>
+
+        <div class="latest-articles-all">
+            <a href="#">
+                <span class="latest-articles-all_text">Все статьи</span>
+                <svg class="arrow-right">
+                    <use xlink:href="img/src.svg#arrow-right"></use>
+                </svg>
+            </a>
         </div>
     </div>
 </section>
@@ -330,30 +444,32 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-md-3 col-sm-4">
-                <a href="#" class="logo"><img src="img/logo.png" alt="">
+            <div class="logo col-md-3 col-sm-4 col-xs-12">
+                <a href="#" class="logo-wrap"><img src="img/logo.png" alt="">
                     <span class="logo-caption">LocalAgent
                             <span class="logo-text">Умное страхование</span></span></a>
             </div>
 
-            <ul class="footer-nav col-md-5 col-sm-4">
+            <ul class="footer-nav col-md-5 col-sm-4 col-xs-12">
                 <li><a href="#">О нас</a></li>
-                <li><a href="#">Вопросы/Ответы</a></li>
                 <li><a href="#">Блог</a></li>
+                <li><a href="#">Вопросы/Ответы</a></li>
                 <li><a href="#">Контакты</a></li>
             </ul>
 
-            <form action="#" class="footer-subscribe col-md-4 col-sm-4">
-                <input type="email" class="footer-subscribe-input hide-placeholder hidden-sm hidden-xs" placeholder="Подписаться на рассылку">
-                <input type="email" class="footer-subscribe-input hide-placeholder visible-xs visible-sm" placeholder="Подписаться">
+            <form action="#" class="footer-subscribe col-md-4 col-sm-4 col-xs-12">
+                <input type="email" class="footer-subscribe-input hide-placeholder hidden-sm hidden-xs"
+                       placeholder="Подписаться на рассылку">
+                <input type="email" class="footer-subscribe-input hide-placeholder visible-xs visible-sm"
+                       placeholder="Подписаться">
                 <button class="btn">
                     <svg class="letter">
-                        <use xlink:href="http://localhost:9005/img/src.svg#letter"></use>
+                        <use xlink:href="img/src.svg#letter"></use>
                     </svg>
                 </button>
             </form>
 
-            <div class="footer-bottom col-md-12 col-sm-12">
+            <div class="footer-bottom col-md-12 col-sm-12 col-xs-12">
                 <div class="copyright">© 2016-2017. Local Agent.</div>
 
                 <ul class="social list-unstyled">
@@ -381,7 +497,6 @@
 <script src="js/jquery.js"></script>
 <script src="js/lib.js"></script>
 <script src="js/common.js"></script>
-<!--<script src="http://cdn.trackduck.com/toolbar/prod/td.js" async data-trackduck-id="58a72639046fe7016caee39e"></script>-->
 
 </body>
 </html>

@@ -1,4 +1,4 @@
-.logo {
+.logo-wrap {
   overflow: hidden;
   @include from('xl') {
     display: flex;
@@ -40,5 +40,12 @@
   @include ProximaNovaSemibold;
   @include to('l') {
     font-size: 11.65px;
+  }
+  .logo-text {
+    @include to('s') {
+      font-size: 10px;
+      display: block;
+      top: 5px;
+    }
   }
 }
