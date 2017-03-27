@@ -67,7 +67,7 @@ gulp.task('clean', function (cb) {
 
 gulp.task('iconify', function() {
     iconify({
-        src: './src/img/icons/*.svg',
+        src: './source/icons/*.svg',
         pngOutput: './test/img/icons/png',
         scssOutput: './test/scss',
         cssOutput:  './test/css',

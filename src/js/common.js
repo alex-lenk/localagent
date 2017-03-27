@@ -5,6 +5,12 @@ $(document).ready(function () {
         }
     );
 
+    $(".contacts-form-toggle").click(
+        function () {
+            $('.contacts-form-toggle').toggleClass("contacts-form-toggle-open");
+        }
+    );
+
     $('.insurance-type-point').on('click', function () {
         $('.insurance-type-point').removeClass('current');
         $(this).addClass('current');

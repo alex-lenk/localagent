@@ -1,23 +1,23 @@
 .hide-placeholder {
   &::-webkit-input-placeholder {
     opacity: 1;
-    color: #a1dfe4;
+    color: #b0aaaa;
     transition: opacity 0.3s ease;
   }
   &::-moz-placeholder {
     opacity: 1;
-    color: #a1dfe4;
+    color: #b0aaaa;
     transition: opacity 0.3s ease;
   }
   &:-moz-placeholder {
     opacity: 1;
-    color: #a1dfe4;
+    color: #b0aaaa;
     transition: opacity 0.3s ease;
   }
   &:-ms-input-placeholder {
     opacity: 1;
     transition: opacity 0.3s ease;
-    color: #a1dfe4;
+    color: #b0aaaa;
   }
   &:focus::-webkit-input-placeholder {
     opacity: 0;
@@ -36,32 +36,78 @@
     transition: opacity 0.3s ease;
   }
 }
-/*
+
+.form-group {
+  margin-bottom: 20px;
+}
 
 .form-control {
   width: 100%;
-  padding: 11px 20px;
-  border: 1px solid #dbdcdc;
+  height: 55px;
+  padding: 0 50px 2px;
+  border: 1px solid #e5e5e5;
   font-size: 16px;
   display: block;
+  border-radius: 32px;
   background-color: #ffffff;
+  color: #505b6a;
   transition: all .3s ease;
-  outline: 1px solid #e5e4e2;
-  outline-offset: -2px;
-  &:not(select) {
-    color: #616161;
+  font-weight: normal;
+  @include RobotoLight;
+  &:focus, &:active {
+    border-color: #6ba0b2;
   }
 }
 
-.form-group {
-  margin-bottom: 25px;
+textarea.form-control {
+  height: 188px;
+  padding: 19px 47px 10px;
+  resize: none;
+  overflow: hidden;
 }
 
-select {
-  color: #a1dfe4;
+.required-field {
+  position: relative;
+  &:before {
+    content: '*';
+    position: absolute;
+    top: 17px;
+    left: 46px;
+    color: #df4a4a;
+    font-size: 23px;
+    @include RobotoRegular;
+  }
 }
 
-.chose-select {
-  color: #616161;
+.error-field {
+  .form-control {
+    background-color: #ffe8e8;
+    border-color: #ff9191;
+    &::-webkit-input-placeholder {
+      color: #505b6a;
+    }
+    &::-moz-placeholder {
+      color: #505b6a;
+    }
+    &:-moz-placeholder {
+      color: #505b6a;
+    }
+    &:-ms-input-placeholder {
+      color: #505b6a;
+    }
+  }
 }
-*/
+
+.field-filled {
+  .selected {
+    width: 15px;
+    height: 12px;
+    position: absolute;
+    top: 21px;
+    right: 49px;
+    fill: #a7c343;
+  }
+  .form-control {
+    border-color: #c8d3a1;
+  }
+}

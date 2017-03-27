@@ -1,0 +1,259 @@
+.header-contacts {
+  background: url(../img/bg-contacts.jpg) no-repeat 0 0;
+  background-size: cover;
+  &::before {
+    opacity: .7;
+    background-position: 0 0;
+  }
+}
+
+.contacts {
+  padding-top: 37px;
+  padding-bottom: 200px;
+}
+
+.contacts-title {
+  margin-bottom: 55px;
+}
+
+.contacts-form {
+  display: none;
+  .btn-blue {
+    margin-top: 15px;
+    margin-right: 15px;
+    padding: 22px 44px 18px 45px;
+    font-size: 16px;
+  }
+}
+
+.contacts-emails {
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #e3e3e3;
+  letter-spacing: -.1px;
+  @include clearfix;
+  li:not(:first-child):not(:last-child) {
+    padding: 8px 0 19px;
+  }
+  a:not(:hover) {
+    color: #505b6a;
+  }
+}
+
+.contacts-emails-message {
+  width: 68px;
+  height: 68px;
+  margin-right: 20px;
+  border-radius: 50%;
+  float: left;
+  background-color: #a7c343;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .message {
+    width: 27px;
+    height: 24px;
+    fill: #ffffff;
+  }
+}
+
+.contacts-requisites {
+  li {
+    @include clearfix;
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+  .text-selection {
+    float: left;
+  }
+}
+
+.contacts-requisites-text {
+  padding-left: 195px;
+  line-height: 1.2;
+  display: block;
+}
+
+.text-selection {
+  color: #6ba0b2;
+}
+
+@include to('s') {
+  .header-contacts {
+    background-size: cover;
+    background-position: 57% top;
+  }
+  .contacts {
+    padding-bottom: 80px;
+  }
+
+  .contacts-title {
+    margin-bottom: 55px;
+    font-size: 24px;
+  }
+  .contacts-left .contacts-title {
+    display: none;
+  }
+
+  .contacts-form-toggle {
+    padding: 26px 0 23px 38px;
+    border-radius: 10px;
+    color: #ffffff;
+    background-color: #6ba0b2;
+    font-size: 15px;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+    @include RobotoBold;
+
+    .letter {
+      width: 27px;
+      height: 18px;
+      margin-left: 10px;
+      fill: #ffffff;
+      display: inline-block;
+      vertical-align: top;
+      margin-top: -2px;
+    }
+    .down {
+      width: 17px;
+      height: 12px;
+      transform: rotate(90deg);
+      fill: #ffffff;
+      position: absolute;
+      top: 27px;
+      right: 27px;
+      z-index: 18;
+    }
+
+    &:not(.contacts-form-toggle-open):not(:hover) {
+      background-color: #f2f9fb;
+      color: #6ba0b2;
+      .down {
+        fill: #c0b7b7;
+      }
+      .letter {
+        fill: #6ba0b2;
+      }
+    }
+  }
+
+  .contacts-left {
+    max-width: 414px;
+    margin: 0 auto;
+
+    textarea.form-control {
+      height: 140px;
+    }
+  }
+  .contacts-info {
+    max-width: 414px;
+    margin: 0 auto;
+    padding-top: 60px;
+  }
+}
+
+.contacts-form-toggle-open {
+  .down {
+    transform: rotate(-90deg);
+  }
+  + .contacts-form {
+    display: block;
+    padding-top: 65px;
+  }
+  .required-field {
+    left: 31px;
+  }
+}
+
+@include from('m') {
+  .contacts-form {
+    display: block;
+  }
+  .contacts-form-toggle, .down, .letter {
+    display: none;
+  }
+}
+
+@include from('l') {
+  .contacts-requisites {
+    li {
+      letter-spacing: -.2px;
+      &:not(:last-child) {
+        margin-bottom: 23px;
+      }
+    }
+    .text-selection {
+      width: 195px;
+    }
+  }
+}
+
+@include between('m', 'l') {
+  .header-contacts {
+    background-position: 40% 0;
+  }
+}
+
+@include at('l') {
+  .contacts-info {
+    padding-left: 45px;
+  }
+}
+
+@include to('m') {
+  .contacts-emails {
+    .text-selection {
+      display: block;
+    }
+    li {
+      &:not(:first-child):not(:last-child) {
+        margin-top: -2px;
+        padding: 0 0 7px;
+        line-height: 1.2;
+      }
+    }
+  }
+
+  .contacts-requisites {
+    .text-selection {
+      max-width: 125px;
+    }
+    li:last-child {
+      .text-selection {
+        float: none;
+      }
+      .contacts-requisites-text {
+        padding-left: 0;
+        margin-top: 12px;
+      }
+    }
+  }
+  .contacts-requisites-text {
+    padding-left: 125px;
+  }
+}
+
+@include to('xs') {
+  .contacts-requisites {
+    li {
+      .text-selection {
+        max-width: none;
+        float: none;
+        margin-bottom: 12px;
+        display: block;
+      }
+    }
+  }
+  .contacts-requisites-text {
+    padding-left: 0;
+  }
+  .contacts-form-toggle {
+    padding-left: 8%;
+  }
+  .contacts-form-toggle .down {
+    right: 20px;
+  }
+}
