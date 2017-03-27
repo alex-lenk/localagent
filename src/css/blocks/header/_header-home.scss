@@ -1,14 +1,17 @@
 .header-home {
   width: 100%;
+  background: url(../img/bg-home-header.jpg);
+  background-repeat: no-repeat;
   @include from('s') {
     height: 885px;
-    background: url(../img/bg-home-header.jpg) no-repeat 0 40%;
+    background-position: center -150px;
     background-size: cover;
   }
   @include to('xs') {
-    height: 640px;
-    background: url(../img/bg-home-header.jpg) no-repeat 34% 3%;
-    background-size: 250%;
+    height: 46vh;
+    background-image: url(../img/bg-home-header.jpg);
+    background-size: 243vw;
+    background-position: -38vw 0vw;
   }
   .header-center {
     padding-top: 175px;

@@ -78,36 +78,19 @@ footer {
 
 .footer-find-agent_link {
   width: 280px;
-  padding: 21px 0 18px 34px;
   text-align: left;
-  text-transform: uppercase;
-  font-size: 15px;
-  color: #4f8ad9;
-  border-radius: 30px;
-  background-color: #ffffff;
-  box-shadow: 0 8px 12px 3px rgba(79, 138, 217, 0.25);
   display: block;
   margin: 0 auto;
   position: relative;
-  transition: all 0.3s ease;
-  @include RobotoBold;
   &:hover {
     background-color: #505b6a;
     color: #ffffff;
-    .search {
-      fill: #ffffff;
-    }
   }
   .search {
-    width: 21px;
-    height: 18px;
-    fill: #4f8ad9;
     vertical-align: middle;
-    opacity: 1;
     position: absolute;
     top: 17px;
     right: 34px;
-    transition: all 0.3s ease;
   }
 }
 
@@ -135,6 +118,11 @@ footer {
     clear: both;
     display: flex;
     justify-content: space-around;
+    li {
+      @include to('xs') {
+        font-size: 4.4vw;
+      }
+    }
   }
   li {
     margin-bottom: 15px;

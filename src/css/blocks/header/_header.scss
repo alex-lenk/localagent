@@ -22,11 +22,16 @@ header {
     @include to('s') {
       background-position: 32% 0;
     }
+    @include to('xs') {
+      opacity: .8;
+    }
   }
   &::after {
     width: 100%;
     height: 141px;
-    background: url(../img/bg-header-line.png) no-repeat top center;
+    background-repeat: no-repeat;
+    background-image: url(../img/bg-header-line.png);
+    background-position: top center;
     background-size: cover;
     content: '';
     position: absolute;
@@ -37,7 +42,12 @@ header {
     @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
     only screen and (min-resolution: 144dpi),
     only screen and (min--moz-device-pixel-ratio: 1.5) {
-      background: url(../img/bg-header-line@x2.png) no-repeat top center;
+      background-image: url(../img/bg-header-line@x2.png);
+    }
+    @include to('xs') {
+      height: 6vh;
+      background-size: 185vw 26vw;
+      background-position: -17vw 0vw;
     }
   }
   .container {
@@ -68,7 +78,7 @@ header {
       font-size: 6.8vw;
     }
     @include to('xs') {
-      margin-bottom: 9px;
+      margin-bottom: 15px;
     }
   }
   .intro-text {
@@ -106,4 +116,7 @@ header {
 .intro-text {
   line-height: 1.2;
   font-size: 18px;
+  @include to('xs') {
+    font-size: 4.4vw;
+  }
 }
