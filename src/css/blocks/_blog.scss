@@ -19,25 +19,39 @@
 
 .post-media {
   transition: all 0.3s ease;
+  @include to('s') {
+    margin-bottom: 25px;
+  }
   &:hover {
     opacity: .8;
   }
 }
 
-.post-content {
-}
-
 .post-title {
   margin: -3px 0 17px;
   font-size: 28px;
+  max-height: 57px;
+  overflow: hidden;
   a:not(:hover) {
     color: #505b6a;
+  }
+  @include to('m') {
+    font-size: 24px;
   }
 }
 
 .post-text {
   margin-bottom: 30px;
   letter-spacing: -0.2px;
+  @include at('l') {
+    font-size: 16px;
+  }
+  @include to('m') {
+    margin-bottom: 25px;
+    letter-spacing: -0.2px;
+    height: 80px;
+    overflow: hidden;
+  }
 }
 
 .post-bottom {
@@ -63,11 +77,22 @@
   padding-top: 45px;
   display: flex;
   justify-content: center;
+  @include to('s') {
+    align-items: center;
+  }
+  .arrow-right {
+    fill: #6ba0b2;
+    width: 20px;
+    height: 12px;
+  }
   li {
     font-size: 19px;
     @include RobotoMedium;
     &:not(:first-child):not(:last-child) {
       padding: 0 9px;
+      @include to('s') {
+        padding: 0 5px;
+      }
     }
     &:first-child, &:last-child {
       flex-grow: 1;
@@ -75,11 +100,29 @@
       text-transform: uppercase;
       @include RobotoBold;
       a {
-        border-bottom: 1px solid;
+        @include from('m') {
+          border-bottom: 1px solid;
+        }
+        @include to('s') {
+          display: inline-block;
+          border: 1px solid #e3e3e3;
+          border-radius: 32px;
+          padding: 13px 22px 11px 22px;
+          &:hover {
+            svg {
+              fill: #b5afaf;
+            }
+          }
+        }
       }
     }
     &:last-child {
       text-align: right;
+    }
+    &:first-child {
+      svg {
+        transform: rotate(180deg);
+      }
     }
   }
   a {
@@ -90,5 +133,8 @@
   }
   .current a {
     color: #4f8ad9;
+  }
+  svg {
+    transition: all 0.3s ease;
   }
 }
