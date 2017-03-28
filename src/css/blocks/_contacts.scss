@@ -117,7 +117,7 @@
       vertical-align: top;
       margin-top: -2px;
     }
-    .down {
+    .next {
       width: 17px;
       height: 12px;
       transform: rotate(90deg);
@@ -131,7 +131,7 @@
     &:not(.contacts-form-toggle-open):not(:hover) {
       background-color: #f2f9fb;
       color: #6ba0b2;
-      .down {
+      .next {
         fill: #c0b7b7;
       }
       .letter {
@@ -156,7 +156,7 @@
 }
 
 .contacts-form-toggle-open {
-  .down {
+  .next {
     transform: rotate(-90deg);
   }
   + .contacts-form {
@@ -172,7 +172,7 @@
   .contacts-form {
     display: block;
   }
-  .contacts-form-toggle, .down, .letter {
+  .contacts-form-toggle {
     display: none;
   }
 }
@@ -253,7 +253,7 @@
   .contacts-form-toggle {
     padding-left: 8%;
   }
-  .contacts-form-toggle .down {
+  .contacts-form-toggle .next {
     right: 20px;
   }
 }

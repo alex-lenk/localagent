@@ -14,12 +14,33 @@ var gulp = require('gulp'),
     newer = require('gulp-newer'),
     rename = require('gulp-rename'),
     svgSprite = require('gulp-svg-sprites'),
-    svgmin = require('gulp-svgmin'),
     iconify = require('gulp-iconify'),
     cheerio = require('gulp-cheerio'),
     replace = require('gulp-replace'),
     create = browserSync.create(),
-    reload = browserSync.reload;
+    reload = browserSync.reload,
+    svgstore = require('gulp-svgstore'),
+    svgmin = require('gulp-svgmin'),
+    path = require('path');
+
+gulp.task('svgstore', function () {
+    return gulp
+        .src('./source/icons/*.svg')
+        .pipe(svgmin(function (file) {
+            var prefix = path.basename(file.relative, path.extname(file.relative));
+            return {
+                plugins: [{
+                    cleanupIDs: {
+                        prefix: prefix + '-',
+                        minify: true
+                    }
+                }]
+            }
+        }))
+        .pipe(svgstore())
+        .pipe(gulp.dest('./build/img'));
+});
+
 
 var path = {
         build: { //Тут мы укажем куда складывать готовые после сборки файлы
@@ -65,20 +86,20 @@ gulp.task('clean', function (cb) {
     rimraf(path.clean, cb);
 });
 
-gulp.task('iconify', function() {
+gulp.task('iconify', function () {
     iconify({
         src: './source/icons/*.svg',
         pngOutput: './test/img/icons/png',
         scssOutput: './test/scss',
-        cssOutput:  './test/css',
+        cssOutput: './test/css',
         defaultWidth: '300px',
         defaultHeight: '200px',
         svgoOptions: {
             enabled: true,
             options: {
                 plugins: [
-                    { removeUnknownsAndDefaults: false },
-                    { mergePaths: false }
+                    {removeUnknownsAndDefaults: false},
+                    {mergePaths: false}
                 ]
             }
         },
