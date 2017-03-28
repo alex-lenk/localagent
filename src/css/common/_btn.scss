@@ -80,7 +80,7 @@
     border-radius: 32px;
     background-color: #ffffff;
     box-shadow: 0 8px 12px 3px rgba(79, 138, 217, 0.25);
-    @include to('s') {
+    @include to('xs') {
       padding: 16px 20px 17px 20px;
       font-size: 3.9vw;
     }

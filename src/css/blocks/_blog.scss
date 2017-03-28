@@ -30,13 +30,13 @@
 .post-title {
   margin: -3px 0 17px;
   font-size: 28px;
-  max-height: 57px;
-  overflow: hidden;
   a:not(:hover) {
     color: #505b6a;
   }
   @include to('m') {
     font-size: 24px;
+    max-height: 57px;
+    overflow: hidden;
   }
 }
 
@@ -80,11 +80,6 @@
   @include to('s') {
     align-items: center;
   }
-  .arrow-right {
-    fill: #6ba0b2;
-    width: 20px;
-    height: 12px;
-  }
   li {
     font-size: 19px;
     @include RobotoMedium;
@@ -94,37 +89,8 @@
         padding: 0 5px;
       }
     }
-    &:first-child, &:last-child {
-      flex-grow: 1;
-      font-size: 16px;
-      text-transform: uppercase;
-      @include RobotoBold;
-      a {
-        @include from('m') {
-          border-bottom: 1px solid;
-        }
-        @include to('s') {
-          display: inline-block;
-          border: 1px solid #e3e3e3;
-          border-radius: 32px;
-          padding: 13px 22px 11px 22px;
-          &:hover {
-            svg {
-              fill: #b5afaf;
-            }
-          }
-        }
-      }
-    }
-    &:last-child {
-      text-align: right;
-    }
-    &:first-child {
-      svg {
-        transform: rotate(180deg);
-      }
-    }
   }
+
   a {
     color: #6ba0b2;
     &:hover {
@@ -136,5 +102,46 @@
   }
   svg {
     transition: all 0.3s ease;
+  }
+  .pagination-prev, .pagination-next {
+    flex-grow: 1;
+    a {
+      @include from('m') {
+        border-bottom: 1px solid;
+      }
+    }
+  }
+}
+
+.pagination-prev, .pagination-next {
+  font-size: 16px;
+  text-transform: uppercase;
+  @include RobotoBold;
+  a {
+    @include to('s') {
+      display: inline-block;
+      border: 1px solid #e3e3e3;
+      border-radius: 32px;
+      padding: 13px 22px 11px 22px;
+      &:hover svg {
+        fill: #b5afaf;
+      }
+    }
+  }
+
+  .arrow-right {
+    fill: #6ba0b2;
+    width: 20px;
+    height: 12px;
+  }
+}
+
+.pagination-next {
+  text-align: right;
+}
+
+.pagination-prev {
+  svg {
+    transform: rotate(180deg);
   }
 }
