@@ -2,9 +2,4 @@
 //= lib/swiper.jquery.min.js
 //= lib/svgxuse.min.js
 //= lib/plugins-scroll.js
-
-// = lib/SmoothScroll.js
-// = lib/jquery.nanoscroller.min.js
-// = lib/jquery.formstyler.min.js
-
-// = ../../bower_components/slick-carousel/slick/slick.min.js
+//= ../../bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js

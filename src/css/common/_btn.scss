@@ -85,17 +85,18 @@
       font-size: 3.9vw;
     }
     @include RobotoBold;
+    svg {
+      fill: #4f8ad9;
+      transition: all 0.3s ease;
+    }
     .search {
       width: 21px;
       height: 18px;
-      fill: #4f8ad9;
-      transition: all 0.3s ease;
     }
     .arrow-right {
       width: 20px;
       height: 12px;
       margin-left: 8px;
-      fill: #4f8ad9;
       display: inline-block;
       vertical-align: top;
       margin-top: 1px;

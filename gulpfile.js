@@ -21,7 +21,14 @@ var gulp = require('gulp'),
     reload = browserSync.reload,
     svgstore = require('gulp-svgstore'),
     svgmin = require('gulp-svgmin'),
-    path = require('path');
+    path = require('path'),
+    gulpHtmlVersion = require('gulp-html-version');
+
+gulp.task('versions', function() {
+    return gulp.src('./build/*.html')
+        .pipe(gulpHtmlVersion())
+        .pipe(gulp.dest('./build/'));
+});
 
 gulp.task('svgstore', function () {
     return gulp

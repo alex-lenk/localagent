@@ -11,7 +11,7 @@ body {
   min-width: 320px;
 }
 
-a {
+a, .as-link {
   color: #4f8ad9;
   text-decoration: none;
   transition: all 0.3s ease;
@@ -22,6 +22,10 @@ a {
   &:focus {
     outline: none;
   }
+}
+
+.as-link {
+  cursor: pointer;
 }
 
 b, strong {
@@ -128,4 +132,8 @@ button, input, select, textarea {
   &:active {
     outline: none;
   }
+}
+
+.text-selection {
+  color: #6ba0b2;
 }

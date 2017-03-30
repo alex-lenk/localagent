@@ -11,6 +11,20 @@ $(document).ready(function () {
         }
     );
 
+    $(".search-left-head-arrow").click(
+        function () {
+            $('.search-left').toggleClass("search-left-open search-left-closed");
+        }
+    );
+
+    $(function () {
+        $("a[href^='#']").click(function () {
+            var _href = $(this).attr("href");
+            $("html, body").animate({scrollTop: $(_href).offset().top + "px"});
+            return false;
+        });
+    });
+
     $('.insurance-type-point').on('click', function () {
         $('.insurance-type-point').removeClass('current');
         $(this).addClass('current');
@@ -41,6 +55,28 @@ $(document).ready(function () {
     });
 });
 
+const searchLeftContent = $(".search-left-content");
+
+(checkAndRepaint)();
+window.onresize = checkAndRepaint;
+
+function checkAndRepaint() {
+
+    if ($(window).width() >= 768) {
+
+        // Инициализация плагина
+        searchLeftContent.mCustomScrollbar({
+            theme: "dark-3"
+        });
+
+        console.log('Initial');
+    } else {
+        // Дестрой плагина
+        searchLeftContent.mCustomScrollbar("destroy");
+        console.log('destroy');
+    }
+}
+
 $(function () {
     //Chrome Smooth Scroll
     try {
@@ -57,7 +93,6 @@ $(function () {
 });
 
 
-
 const insuranceInput = $('.insurance-input');
 
 insuranceInput.click(function () {
@@ -65,7 +100,6 @@ insuranceInput.click(function () {
     inputSelect.slideToggle();
     input_wrapperSpan.toggleClass('act_ar');
 });
-
 
 
 const cars_name = $('.cars_name');

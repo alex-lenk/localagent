@@ -25,6 +25,7 @@
     "gulp-autoprefixer": "^3.1.0",
     "gulp-cheerio": "^0.6.2",
     "gulp-clean-css": "^2.0.10",
+    "gulp-html-version": "^1.0.1",
     "gulp-htmlmin": "^2.0.0",
     "gulp-iconify": "^0.6.0",
     "gulp-imagemin": "^3.0.1",
