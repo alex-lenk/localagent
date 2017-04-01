@@ -1,12 +1,3 @@
-.logo {
-  @include from('xl') {
-    min-width: 275px;
-  }
-  @include between('m','l') {
-    min-width: 255px;
-  }
-}
-
 .logo-wrap {
   overflow: hidden;
   @include from('xl') {

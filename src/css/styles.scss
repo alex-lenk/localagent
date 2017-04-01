@@ -5,12 +5,17 @@
 
 /* fonts */
 @import "common/fonts";
+@import "common/_icons.svg";
 
 /* common */
 @import "common/common";
 
+@import "blocks/datepicker";
+@import "blocks/hint";
+
 /* forms */
 @import "common/form";
+@import "common/checkbox-custom";
 
 /* btn */
 @import "common/btn";
@@ -35,3 +40,5 @@
 @import "blocks/blog";
 @import "blocks/single-post";
 @import "blocks/search-page";
+@import "blocks/form-insurance";
+@import "blocks/insurance-steps";

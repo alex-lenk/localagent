@@ -30,6 +30,15 @@ $(document).ready(function () {
         $(this).addClass('current');
     });
 
+    $('.select-open').on('click', function () {
+        $(this).toggleClass('select-active');
+        $(this).parent().find('.make-choice').toggleClass('make-choice-active');
+    });
+
+    $('.datepicker-here').on('click', function () {
+        $(this).toggleClass('datepicker-here-open');
+    });
+
     var swiper = new Swiper('.partners-carousel', {
         grabCursor: true,
         slidesPerView: 5,
@@ -55,42 +64,37 @@ $(document).ready(function () {
     });
 });
 
-const searchLeftContent = $(".search-left-content");
+var searchLeftContent = $(".search-left-content");
 
-(checkAndRepaint)();
-window.onresize = checkAndRepaint;
-
-function checkAndRepaint() {
-
-    if ($(window).width() >= 768) {
-
-        // Инициализация плагина
-        searchLeftContent.mCustomScrollbar({
-            theme: "dark-3"
-        });
-
-        console.log('Initial');
-    } else {
-        // Дестрой плагина
-        searchLeftContent.mCustomScrollbar("destroy");
-        console.log('destroy');
-    }
-}
-
-$(function () {
-    //Chrome Smooth Scroll
-    try {
-        $.browserSelector();
-        if ($("html").hasClass("chrome")) {
-            $.smoothScroll();
-        }
-    } catch (err) {
-    }
-
-    $("a").on("dragstart", function (event) {
-        event.preventDefault();
-    });
+searchLeftContent.mCustomScrollbar({
+    theme: "dark-3"
 });
+
+
+$(".make-choice").mCustomScrollbar({
+    theme: "dark-3"
+});
+
+
+/*
+
+ (checkAndRepaint)();
+ window.onresize = checkAndRepaint;
+
+ function checkAndRepaint() {
+
+ if ($(window).width() >= 768) {
+
+ // Инициализация плагина
+
+ console.log('Initial');
+ } else {
+ // Дестрой плагина
+ searchLeftContent.mCustomScrollbar("destroy");
+ console.log('destroy');
+ }
+ }
+
 
 
 const insuranceInput = $('.insurance-input');
@@ -215,3 +219,4 @@ cars_year.click(function () {
         $('.for_mmmm .active_arrow').toggleClass('act_ar');
     }
 });
+*/

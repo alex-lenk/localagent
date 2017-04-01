@@ -96,8 +96,7 @@ gulp.task('clean', function (cb) {
 gulp.task('iconify', function () {
     iconify({
         src: './source/icons/*.svg',
-        pngOutput: './test/img/icons/png',
-        scssOutput: './test/scss',
+        scssOutput: './src/css/common',
         cssOutput: './test/css',
         defaultWidth: '300px',
         defaultHeight: '200px',

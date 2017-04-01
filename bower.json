@@ -23,6 +23,7 @@
     "font-awesome": "^4.*",
     "isotope": "^3.0.1",
     "fancybox": "^2.*",
-    "slick-carousel": "^1.*"
+    "slick-carousel": "^1.*",
+    "air-datepicker": "^2.2.3"
   }
 }
