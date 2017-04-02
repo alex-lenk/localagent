@@ -32,8 +32,13 @@
   padding-bottom: 100px;
 
   .insurance-type {
+    width: 100%;
     padding-left: 0;
     margin-bottom: 41px;
+    clear: both;
+    @include from('xl') {
+      padding-left: 7%;
+    }
   }
   .insurance-type-label {
     margin-right: 29px;
@@ -146,6 +151,10 @@
   .hint-block-icons .ex-point {
     position: static;
   }
+  .insurance-steps .selected {
+    top: 12px;
+    left: 41px;
+  }
 }
 
 @include to('xs') {
@@ -157,6 +166,10 @@
 
   .form-insurance-field h4 {
     font-size: 4.4vw;
+  }
+
+  .add-form-link {
+    font-size: 4vw;
   }
 }
 
@@ -182,8 +195,141 @@
 
 .form-insurance-bottom {
   padding-top: 28px;
+  display: flex;
+  align-items: center;
+  @include from('m') {
+    justify-content: flex-end;
+  }
+  @include to('s') {
+    justify-content: space-between;
+  }
   .btn-blue {
+    margin-left: 80px;
     padding-left: 42px;
     padding-right: 42px;
+    @include to('s') {
+      margin-left: 0;
+      padding-left: 20px;
+      padding-right: 20px;
+      white-space: nowrap;
+    }
+    @include to('xs') {
+      font-size: 3.6vw;
+    }
   }
+}
+
+.add-form {
+  margin-bottom: 20px;
+  position: relative;
+  @include from('m') {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.add-form-link {
+  text-transform: uppercase;
+  font-size: 15px;
+  color: #6ba0b2;
+  cursor: pointer;
+  text-decoration: underline;
+  @include RobotoBold;
+  @include to('s') {
+    position: absolute;
+    bottom: -45px;
+    right: 0;
+  }
+}
+
+.add-info {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  .form-control {
+    height: 50px;
+    padding-left: 23px;
+    padding-right: 15px;
+  }
+  &:last-of-type {
+    .add-info-label-delete {
+      display: block;
+    }
+  }
+}
+
+.add-info-label {
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.add-info-label-delete {
+  display: none;
+  padding-right: 27px;
+  color: #e94848;
+  font-size: 15px;
+  position: relative;
+  cursor: pointer;
+  &::before, &::after {
+    height: 16px;
+    width: 2px;
+    content: '';
+    background: #e94848;
+    position: absolute;
+    right: 7px;
+    top: 0;
+    border-radius: 2px;
+  }
+  &::before {
+    transform: rotateZ(-45deg);
+  }
+  &::after {
+    transform: rotateZ(45deg);
+  }
+}
+
+.box-gender {
+  @include from('m') {
+    max-width: 180px;
+  }
+  @include to('s') {
+    width: 46%;
+    margin-right: 20px;
+  }
+}
+
+.box-status {
+  @include from('m') {
+    max-width: 190px;
+  }
+  @include to('s') {
+    width: 48%;
+  }
+}
+
+.box-data {
+  max-width: 235px;
+  @include to('s') {
+    width: 64%;
+  }
+}
+
+.box-experience {
+  max-width: 100px;
+  @include to('s') {
+    width: 29%;
+  }
+}
+
+.contacts-form-info {
+  padding-top: 20px;
+  fieldset {
+    margin-bottom: 30px;
+  }
+}
+
+.contacts-form-info-title {
+  margin-bottom: 35px;
 }

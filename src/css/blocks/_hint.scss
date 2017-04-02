@@ -61,6 +61,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  clear: both;
 }
 
 .hint-block-icons {
@@ -70,6 +71,9 @@
   top: 0;
   left: 0;
   background-color: #f2f9fb;
+  @include to('s') {
+    width: 15%;
+  }
   .ex-point {
     width: 38px;
     height: 40px;
@@ -93,7 +97,7 @@
   }
   .hint-block {
     height: auto;
-    padding: 10px 15px 10px 90px;
+    padding: 10px 15px 10px 20%;
   }
   .hint-block-text {
     font-size: 15px;

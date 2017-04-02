@@ -43,8 +43,9 @@
     width: 19px;
     height: 20px;
     position: absolute;
-    top: 23px;
+    top: 50%;
     right: 31px;
+    margin-top: -10px;
     fill: #c0b7b7;
   }
 }
@@ -81,6 +82,21 @@ textarea.form-control {
   padding: 19px 47px 10px;
   resize: none;
   overflow: hidden;
+}
+
+.form-hours {
+  display: flex;
+  align-items: center;
+  .form-control {
+    max-width: 100px;
+    max-height: 50px;
+    padding-right: 10px;
+  }
+  .tire {
+    padding: 0 10px;
+    font-size: 18px;
+    @include RobotoMedium;
+  }
 }
 
 .required-field {
@@ -129,6 +145,10 @@ textarea.form-control {
     top: 21px;
     right: 49px;
     fill: #a7c343;
+  }
+  &::before {
+    opacity: 0;
+    visibility: hidden;
   }
   .form-control {
     border-color: #c8d3a1;

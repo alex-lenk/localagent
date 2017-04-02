@@ -110,4 +110,23 @@
       }
     }
   }
+
+  &-back {
+    text-transform: uppercase;
+    font-size: 15px;
+    @include RobotoBold;
+    &:hover {
+      color: #4f8ad9;
+      .arrow-right {
+        fill: #4f8ad9;
+      }
+    }
+    .arrow-right {
+      width: 20px;
+      height: 12px;
+      margin-right: 10px;
+      transform: rotateZ(180deg);
+      fill: #505b6a;
+    }
+  }
 }

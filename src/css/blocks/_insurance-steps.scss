@@ -58,24 +58,17 @@
   }
 }
 
-.insurance-steps-text {
-}
-
-.insurance-steps-number {
-  @include from('l') {
+@include from('l') {
+  .insurance-steps-number {
     display: none;
   }
-}
-
-@include from('l') {
   .insurance-steps-wrap {
     float: right;
     position: relative;
   }
   .insurance-steps {
-    margin-top: 64px;
     margin-bottom: 0;
-    padding-left: 97px;
+    padding-left: 70px;
 
     &::before {
       content: '';
@@ -83,7 +76,7 @@
       height: calc(100% - 9px);
       position: absolute;
       top: 9px;
-      left: 76px;
+      left: 53px;
       border-left: 1px dashed #c0b7b7;
       z-index: 10;
     }
@@ -117,7 +110,7 @@
         display: block;
         content: '';
         background-color: #a7c343;
-        box-shadow: -77px 51px 0 -20px #c0b7b7;
+        box-shadow: -87px 51px 0 -20px #c0b7b7;
       }
     }
     .current {
@@ -160,6 +153,7 @@
 
 @include from('xl') {
   .insurance-steps {
+    padding-left: 97px;
     &::before {
       left: 80px;
     }
@@ -172,10 +166,8 @@
 }
 
 @include from('m') {
-  .insurance-steps {
-    li {
-      text-align: center;
-    }
+  .insurance-steps li {
+    text-align: center;
   }
 }
 
@@ -231,8 +223,6 @@
     .selected {
       width: 18px;
       height: 18px;
-      top: 0;
-      left: 11px;
     }
   }
   .insurance-steps-number {
@@ -264,6 +254,10 @@
         display: inline-block !important;
         vertical-align: middle;
       }
+    }
+    .selected {
+      top: 0;
+      left: 11px;
     }
   }
 }

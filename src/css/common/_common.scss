@@ -201,8 +201,9 @@ button, input, select, textarea {
     transform: rotate(90deg);
     fill: #c0b7b7;
     position: absolute;
-    top: 27px;
+    top: 50%;
     right: 33px;
+    margin-top: -6px;
     z-index: 18;
   }
 }
