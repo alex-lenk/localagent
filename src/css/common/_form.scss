@@ -72,9 +72,6 @@
   &:focus, &:active {
     border-color: #6ba0b2;
   }
-  @include to('xs') {
-    font-size: 4vw;
-  }
 }
 
 textarea.form-control {
@@ -152,21 +149,5 @@ textarea.form-control {
   }
   .form-control {
     border-color: #c8d3a1;
-  }
-}
-
-@include from('m') {
-  .form-half {
-    @include clearfix;
-    .form-group {
-      width: 50%;
-      float: left;
-      &:first-of-type {
-        padding-right: 15px;
-      }
-      &:last-of-type {
-        padding-left: 15px;
-      }
-    }
   }
 }

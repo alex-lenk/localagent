@@ -1,15 +1,6 @@
 .navbar {
   padding-top: 30px;
   @include RobotoRegular;
-  @include to('l') {
-    padding-top: 24px;
-  }
-  @include to('s') {
-    float: right;
-    padding-left: 0;
-    padding-top: 7px;
-    position: static;
-  }
 }
 
 .navbar-toggle {
@@ -35,35 +26,13 @@
     box-shadow: 0 7px 0 0 #ffffff, 0 -7px 0 0 #ffffff;
     transition: all 0.3s ease;
   }
-  @include to('s') {
-    display: block;
-  }
 }
 
 .navbar-menu {
   display: flex;
   justify-content: flex-end;
-  @include to('s') {
-    display: none;
-  }
-  @include from('m') {
-    li:not(:first-of-type) {
-      margin-left: 40px;
-    }
-  }
   a {
     border-bottom: 1px solid transparent;
-  }
-  @include from('m') {
-    a:hover, .current a, .current span {
-      border-bottom-color: #ffffff;
-      color: #ffffff;
-    }
-  }
-  @include to('s') {
-    a:hover, .current a {
-      color: #4f8ad9;
-    }
   }
 }
 
@@ -88,11 +57,6 @@
     li {
       position: relative;
       z-index: 6;
-      @include to('s') {
-        &:not(:last-of-type) {
-          margin-bottom: 45px;
-        }
-      }
     }
     a {
       color: #505b6a;

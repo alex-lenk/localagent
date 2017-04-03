@@ -71,9 +71,6 @@
   top: 0;
   left: 0;
   background-color: #f2f9fb;
-  @include to('s') {
-    width: 15%;
-  }
   .ex-point {
     width: 38px;
     height: 40px;
@@ -87,23 +84,4 @@
 .hint-block-text {
   font-size: 16px;
   line-height: 1.2;
-}
-
-@include to('s') {
-  .hint-box-text {
-    width: 319px;
-    right: -100%;
-    left: auto;
-  }
-  .hint-block {
-    height: auto;
-    padding: 10px 15px 10px 20%;
-  }
-  .hint-block-text {
-    font-size: 15px;
-  }
-  .hint-box-text::before {
-    left: auto;
-    right: 31px;
-  }
 }

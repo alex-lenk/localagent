@@ -6,14 +6,6 @@
   .btn-white:hover {
     background-color: #a7c343;
   }
-  .logo {
-    @include from('xl') {
-      min-width: 275px;
-    }
-    @include between('m', 'l') {
-      min-width: 255px;
-    }
-  }
 }
 
 .search-wrapper {
@@ -21,37 +13,12 @@
   position: relative;
   display: flex;
   justify-content: space-between;
-  @include from('m') {
-    height: calc(100% - 130px);
-    overflow: hidden;
-  }
-  @include to('s') {
-    flex-direction: column;
-  }
 }
 
 .header-search {
   height: 110px;
   padding-right: 15px;
   overflow: hidden;
-  @include from('xl') {
-    padding-left: 70px;
-    padding-right: 85px;
-  }
-  @include at('l') {
-    padding-top: 30px;
-  }
-  @include at('l') {
-    padding-left: 30px;
-    padding-right: 45px;
-  }
-  @include at('m') {
-    padding-left: 30px;
-    padding-right: 35px;
-  }
-  @include from('m') {
-    height: 130px;
-  }
   &::after {
     display: none;
   }
@@ -69,38 +36,11 @@
   position: relative;
   z-index: 9;
   float: right;
-  @include to('s') {
-    width: auto;
-    margin-top: 2px;
-    .btn-white {
-      width: 64px;
-      height: 56px;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-  }
   .phone-help {
     width: 19px;
     height: 17px;
     margin-right: 10px;
     vertical-align: middle;
-    @include to('s') {
-      width: 23px;
-      height: 19px;
-      margin-right: 0;
-    }
-  }
-}
-
-@include to('s') {
-  .searching-offers-wrap {
-    height: calc(100% - 130px);
-    overflow: hidden;
-    .search-right {
-      position: relative;
-    }
   }
 }
 
@@ -113,15 +53,6 @@
   justify-content: center;
   align-items: center;
   @include RobotoRegular;
-  @include to('m') {
-    font-size: 17px;
-    + .search-map {
-      height: calc(100% - 80px);
-      position: absolute;
-      left: 0;
-      top: 0;
-    }
-  }
   .search {
     width: 23px;
     height: 27px;
@@ -137,74 +68,18 @@
   text-align: center;
   font-size: 0;
   @include RobotoRegular;
-  @include from('m') {
-    .search-show-map {
-      display: none;
-    }
-  }
-  @include from('xl') {
-    overflow: auto;
-    white-space: nowrap;
-  }
-  @include to('m') {
-    font-size: 17px;
-  }
-  @include to('s') {
-    width: 100%;
-    height: 125px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: #f2f9fb;
-    border-bottom: 1px solid #e3e3e3;
-
-    .text-nowrap {
-      display: block;
-    }
-  }
-  @include to('xs') {
-    height: auto;
-    padding-bottom: 18px;
-    padding-top: 21px;
-    li:first-child {
-      display: none;
-    }
-  }
-  @include at('l') {
-    padding-top: 18px;
-  }
-  @include at('m') {
-    padding-top: 16px;
-  }
   li {
     display: inline-block;
     vertical-align: middle;
     font-size: 18px;
     letter-spacing: -.15px;
     line-height: 1.3;
-    @include from('l') {
-      &:not(:first-child) {
-        margin-bottom: -2px;
-      }
-    }
-    @include from('xl') {
-      &:first-child {
-        height: 100%;
-        padding-top: 28px;
-      }
-    }
-    @include to('xs') {
-      font-size: 4.4vw;
-    }
   }
   .agent {
     width: 22px;
     height: 26px;
     margin-right: 20px;
     fill: #505b6a;
-    @include to('l') {
-      display: none;
-    }
   }
 }
 
@@ -235,97 +110,26 @@ li.search-show-map {
 
 .search-left {
   transition: all .3s ease;
-  @include to('s') {
-    padding-top: 130px;
-    border-bottom: 1px solid #bebebe;
-    box-shadow: 0 8px 12px 0 rgba(115, 115, 115, 0.25);
-  }
 }
 
 .search-left-open {
-  @include from('l') {
-    flex-basis: 420px;
-    max-width: 420px;
-  }
-  @include at('m') {
-    flex-basis: 310px;
-    min-width: 310px;
-  }
-  @include at('l') {
-    min-width: 420px;
-  }
   .search-left-head-arrow {
     width: 42px;
-    @include at('m') {
-      width: 58px;
-    }
     .arrow {
       transform: rotate(180deg);
-    }
-  }
-  .search-left-content {
-    @include from('l') {
-      padding-left: 40px;
-      padding-right: 14px;
-    }
-    @include at('m') {
-      padding-left: 20px;
-      padding-right: 5px;
-    }
-    @include to('s') {
-      line-height: 1.2;
     }
   }
 
   .mCSB_container.mCS_no_scrollbar_y.mCS_y_hidden {
     margin-right: 25px;
-    @include at('m') {
-      margin-right: 15px;
-    }
   }
   .insurance-agent:not(:last-of-type) {
     border-bottom: 1px solid #e3e3e3;
-    @include from('m') {
-      margin-bottom: 35px;
-      padding-bottom: 20px;
-    }
   }
 
   .insurance-agent-list li:before {
     content: counters(item, "") ".";
-    @include from('m') {
-      top: 1px;
-      left: 68px;
-    }
-    @include to('s') {
-      top: 23px;
-      left: 89px;
-    }
-  }
-  .insurance-agent-face {
-    @include from('l') {
-      width: 48px;
-      height: 48px;
-      margin-right: 20px;
-    }
-    @include at('m') {
-      width: 45px;
-      height: 45px;
-      margin-right: 20px;
-    }
-    @include to('s') {
-      width: 70px;
-      height: 70px;
-      margin-right: 18px;
-    }
-    @include to('xs') {
-      .user {
-        width: 32px;
-        height: 29px;
-        top: 21px;
-        left: 18px;
-      }
-    }
+
   }
 }
 
@@ -374,9 +178,6 @@ li.search-show-map {
   align-items: center;
   justify-content: center;
   @include RobotoRegular;
-  @include to('s') {
-    display: none;
-  }
 }
 
 .search-left-head-arrow {
@@ -396,29 +197,12 @@ li.search-show-map {
   }
 }
 
-.search-left-content {
-  @include from('m') {
-    height: calc(100% - 187px);
-    margin-bottom: 75px;
-  }
-  @include to('s') {
-    padding-right: 15px;
-    padding-left: 15px;
-  }
-}
-
 .search-right {
   background: url(../img/example/ex-map.jpg) no-repeat center;
   background-size: cover;
   text-align: center;
   line-height: 1.2;
   flex-grow: 1;
-  @include from('m') {
-    position: relative;
-  }
-  @include to('s') {
-    order: 2;
-  }
 }
 
 .mCS-light-3.mCSB_scrollTools .mCSB_draggerRail,
@@ -465,26 +249,13 @@ li.search-show-map {
 
 .insurance-agent {
   position: relative;
-  @include to('s') {
-    padding-top: 25px;
-    padding-bottom: 15px;
-  }
 }
 
 .insurance-agent-info {
   margin-bottom: 20px;
   @include clearfix;
-  @include at('m') {
-    margin-bottom: 10px;
-  }
   .text-selection {
     margin: 5px 0 21px;
-    @include at('m') {
-      margin-bottom: 17px;
-    }
-    @include to('s') {
-      margin-bottom: 9px;
-    }
   }
 }
 
@@ -516,10 +287,6 @@ li.search-show-map {
   white-space: nowrap;
   overflow: hidden;
   @include RobotoRegular;
-  @include to('s') {
-    padding-left: 17px;
-    margin-top: -2px;
-  }
 }
 
 .insurance-agent-location {
@@ -531,10 +298,6 @@ li.search-show-map {
     height: 23px;
     margin-right: 10px;
     fill: #505b6a;
-    @include to('s') {
-      width: 19px;
-      height: 22px;
-    }
   }
 }
 
@@ -544,12 +307,6 @@ li.search-show-map {
   font-size: 15px;
   border-radius: 10px;
   background-color: #f2f9fb;
-  @include to('m') {
-    font-size: 14px;
-  }
-  @include at('m') {
-    padding: 15px 15px 20px 20px;
-  }
 }
 
 .insurance-agent-more {
@@ -585,12 +342,6 @@ li.search-show-map {
   width: 100%;
   height: 630px;
   position: relative;
-  @include from('m') {
-    height: calc(100% - 80px);
-    position: absolute;
-    left: 0;
-    top: 0;
-  }
 }
 
 .agent-point {
@@ -641,4 +392,3 @@ li.search-show-map {
     z-index: 4;
   }
 }
-

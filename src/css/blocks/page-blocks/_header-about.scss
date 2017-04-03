@@ -1,13 +1,6 @@
 .header-about {
   background: url(../img/bg-about-us.jpg) no-repeat 0 0;
   background-size: cover;
-  @include between('m', 'l') {
-    background-position: 40% 0;
-  }
-  @include to('s') {
-    background-size: cover;
-    background-position: 57% top;
-  }
   &::before {
     opacity: .7;
     background-position: 0 0;

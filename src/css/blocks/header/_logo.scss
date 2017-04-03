@@ -1,42 +1,5 @@
-.logo-wrap {
-  overflow: hidden;
-  @include from('xl') {
-    display: flex;
-    align-items: center;
-  }
+.logo {
   img {
-    width: 78px;
-    margin-right: 14px;
-    transition: all 0.3s ease;
-    @include to('l') {
-      width: 70px;
-      float: left;
-    }
-  }
-}
-
-.logo-caption {
-  font-size: 28px;
-  color: #ffffff;
-  @include ProximaNovaBold;
-  @include to('l') {
-    font-size: 25px;
-    display: block;
-    padding-top: 11px;
-  }
-  @include from('xl') {
-    margin-top: -11px;
-  }
-}
-
-.logo-text {
-  top: 8px;
-  position: relative;
-  text-transform: uppercase;
-  font-size: 13px;
-  display: block;
-  @include ProximaNovaSemibold;
-  @include to('l') {
-    font-size: 11.65px;
+    max-width: 235px;
   }
 }

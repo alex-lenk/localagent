@@ -30,15 +30,11 @@
 
 .form-insurance {
   padding-bottom: 100px;
-
   .insurance-type {
     width: 100%;
     padding-left: 0;
     margin-bottom: 41px;
     clear: both;
-    @include from('xl') {
-      padding-left: 7%;
-    }
   }
   .insurance-type-label {
     margin-right: 29px;
@@ -95,137 +91,20 @@
   }
 }
 
-@include from('xl') {
-  .form-insurance-field {
-    padding-left: 7%;
-  }
-}
-
-@include to('l') {
-  .header-form-insurance .header-title {
-    margin-top: 53px;
-    font-size: 30px;
-  }
-  .clock-info {
-    right: 15px;
-    top: 0;
-    font-size: 16px;
-  }
-}
-
-@include to('m') {
-  .header-form-insurance .header-title {
-    margin-top: 0;
-    font-size: 26px;
-    clear: both;
-    padding-top: 39px;
-  }
-}
-
-@include to('s') {
-  .clock-info {
-    display: none;
-  }
-  .header-form-insurance {
-    height: 190px;
-    .header-title {
-      font-size: 16px;
-      padding-top: 19px;
-      text-align: center;
-    }
-    .logo {
-      float: none;
-      margin: 0 auto;
-    }
-  }
-
-  .form-insurance {
-    padding-top: 15px;
-  }
-
-  .hint-block-icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .hint-block-icons .ex-point {
-    position: static;
-  }
-  .insurance-steps .selected {
-    top: 12px;
-    left: 41px;
-  }
-}
-
-@include to('xs') {
-  .header-form-insurance {
-    .header-title {
-      font-size: 4.1vw;
-    }
-  }
-
-  .form-insurance-field h4 {
-    font-size: 4.4vw;
-  }
-
-  .add-form-link {
-    font-size: 4vw;
-  }
-}
-
-@include at('m') {
-  .clock-info {
-    right: 21px;
-    top: -1px;
-    font-size: 16px;
-    max-width: 145px;
-    text-align: center;
-    line-height: 1.2;
-  }
-
-  .clock-info::before {
-    width: 114px;
-    height: 114px;
-    margin-bottom: 10px;
-    content: '';
-    background-size: 60%;
-    box-shadow: inset 0 2px 4px 1px rgba(0, 0, 0, 0.27), inset 0 0 0 11px #3cabbe;
-  }
-}
-
 .form-insurance-bottom {
   padding-top: 28px;
   display: flex;
   align-items: center;
-  @include from('m') {
-    justify-content: flex-end;
-  }
-  @include to('s') {
-    justify-content: space-between;
-  }
   .btn-blue {
     margin-left: 80px;
     padding-left: 42px;
     padding-right: 42px;
-    @include to('s') {
-      margin-left: 0;
-      padding-left: 20px;
-      padding-right: 20px;
-      white-space: nowrap;
-    }
-    @include to('xs') {
-      font-size: 3.6vw;
-    }
   }
 }
 
 .add-form {
   margin-bottom: 20px;
   position: relative;
-  @include from('m') {
-    display: flex;
-    justify-content: space-between;
-  }
 }
 
 .add-form-link {
@@ -235,11 +114,6 @@
   cursor: pointer;
   text-decoration: underline;
   @include RobotoBold;
-  @include to('s') {
-    position: absolute;
-    bottom: -45px;
-    right: 0;
-  }
 }
 
 .add-info {
@@ -290,37 +164,12 @@
   }
 }
 
-.box-gender {
-  @include from('m') {
-    max-width: 180px;
-  }
-  @include to('s') {
-    width: 46%;
-    margin-right: 20px;
-  }
-}
-
-.box-status {
-  @include from('m') {
-    max-width: 190px;
-  }
-  @include to('s') {
-    width: 48%;
-  }
-}
-
 .box-data {
   max-width: 235px;
-  @include to('s') {
-    width: 64%;
-  }
 }
 
 .box-experience {
   max-width: 100px;
-  @include to('s') {
-    width: 29%;
-  }
 }
 
 .contacts-form-info {

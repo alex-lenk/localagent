@@ -6,21 +6,8 @@
   background-size: cover;
   background-position: 0 65%;
   overflow: hidden;
-  @include at('m') {
-    .swiper-slide {
-      max-width: 320px;
-      padding: 0 15px;
-    }
-  }
-  @include to('s') {
-    padding: 67px 0 44px;
-    background-position: 65% 0;
-  }
   .title {
     margin-bottom: 91px;
-    @include to('s') {
-      margin-bottom: 62px;
-    }
   }
 }
 
@@ -41,16 +28,10 @@
   font-size: 16px;
   line-height: 1.2;
   @include RobotoRegular;
-  @include to('s') {
-    margin-bottom: 31px;
-  }
 }
 
 .statistics-text {
   margin: 0;
   padding-left: 2px;
   line-height: 1.3;
-  @include to('s') {
-    display: none;
-  }
 }

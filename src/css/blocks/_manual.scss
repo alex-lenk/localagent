@@ -1,12 +1,6 @@
 .manual {
   padding-top: 15px;
   padding-bottom: 143px;
-  @include to('l') {
-    padding-bottom: 180px;
-  }
-  @include to('s') {
-    padding-bottom: 111px;
-  }
   .container {
     @include clearfix;
   }
@@ -37,177 +31,55 @@
 
 .manual-one {
   padding-bottom: 85px;
-  @include to('l') {
-    padding-bottom: 100px;
-  }
-  @include to('s') {
-    padding-bottom: 50px;
-  }
   .manual-media {
     img {
       margin-left: -30px;
       box-shadow: none;
     }
-    @include from('xl') {
-      width: 483px;
-      margin-left: 32px;
-      margin-right: 68px;
-      float: left;
-    }
-    @include at('l') {
-      width: 444px;
-      margin-right: 63px;
-    }
-    @include at('m') {
-      width: 278px;
-      margin-right: 94px;
-    }
-    @include to('s') {
-      width: 100%;
-      max-width: 414px;
-      margin: 0 auto 35px;
-      padding-right: 50px;
-    }
-    @include to('xs') {
-      width: 100%;
-      max-width: 257px;
-    }
     &::before {
       right: 19%;
       content: '1';
       top: 10px;
-      @include at('s') {
-        right: 25px;
-      }
     }
   }
   .manual-text {
     width: 480px;
-    @include to('l') {
-      width: 432px;
-    }
-    @include at('m') {
-      width: 345px;
-    }
-    @include to('s') {
-      max-width: 414px;
-      margin: 0 auto;
-    }
   }
 }
 
 .manual-two {
   padding: 122px 0 152px;
   background: url(../img/top-decor-line.png) no-repeat top center, url(../img/bottom-decor-line.png) no-repeat bottom center;
-  @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-  only screen and (min-resolution: 144dpi),
-  only screen and (min--moz-device-pixel-ratio: 1.5) {
-    background: url(../img/top-decor-line@x2.jpg) no-repeat top center, url(../img/bottom-decor-line@x2.jpg) no-repeat bottom center;
-  }
-  @include to('l') {
-    padding-top: 150px;
-    padding-bottom: 178px;
-  }
-  @include to('s') {
-    padding-top: 110px;
-    padding-bottom: 120px;
-  }
   .manual-text {
     width: 465px;
     margin: 0 125px 0 32px;
-    @include to('l') {
-      width: 455px;
-      margin: 0 33px 0 0;
-    }
-    @include at('m') {
-      max-width: 340px;
-    }
-    @include to('s') {
-      order: 2;
-      max-width: 414px;
-      margin: auto;
-    }
   }
   .manual-media {
     width: 485px;
     text-align: center;
-    @include at('l') {
-      width: 415px;
-    }
-    @include at('m') {
-      width: 345px;
-      padding: 0 18px;
-    }
-    @include to('s') {
-      max-width: 414px;
-      width: 100%;
-      margin: 0 auto 35px;
-    }
     &::before {
       left: -27px;
       content: '2';
-      @include to('s') {
-        left: 6px;
-      }
     }
   }
 }
 
 .manual-three {
   padding-top: 60px;
-  @include to('l') {
-    padding-top: 71px;
-  }
-  @include to('s') {
-    padding-top: 20px;
-  }
   .manual-media {
     max-width: 445px;
     margin: 0 110px 0 32px;
-    @include to('l') {
-      max-width: 407px;
-    }
-    @include from('m') {
-      margin: 0 78px 0 0;
-    }
-    @include at('m') {
-      width: 330px;
-      margin-right: 45px;
-    }
-    @include to('s') {
-      width: 100%;
-      max-width: 414px;
-      margin: 0 auto 35px;
-    }
-    @include from('xl') {
-      margin: 0 95px 0 32px;
-      max-width: 455px;
-    }
     &::before {
       right: -29px;
       content: '3';
-      @include to('s') {
-        right: 6px;
-      }
     }
   }
   .manual-text {
     width: 530px;
-    @include to('l') {
-      width: 450px;
-    }
-    @include at('m') {
-      width: 340px;
-    }
-    @include to('s') {
-      max-width: 414px;
-      margin: 0 auto;
-    }
   }
 }
 
 .manual-media {
-  float: left;
   position: relative;
   @include clearfix;
   img {
@@ -226,39 +98,6 @@
     align-items: center;
     justify-content: center;
     @include RobotoBold;
-    @include from('m') {
-      width: 55px;
-      height: 55px;
-      box-shadow: 0 0 0 8px rgba(79, 138, 217, 0.06);
-    }
-    @include to('s') {
-      box-shadow: 0 0 0 6px rgba(79, 138, 217, 0.06);
-    }
-  }
-}
-
-.manual-media-phone {
-  width: 167px;
-  position: absolute;
-  right: -88px;
-  bottom: -17px;
-  box-shadow: none;
-  @include to('l') {
-    width: 156px;
-    right: -81px;
-  }
-  @include to('m') {
-    width: 100px;
-    right: -51px;
-  }
-  @include to('s') {
-    width: auto;
-    height: 64%;
-    right: -3px;
-  }
-  @include to('xs') {
-    height: 77%;
-    right: -63px;
   }
 }
 
@@ -269,33 +108,9 @@
 
 .manual-text {
   float: left;
-  @include from('l') {
-    padding-right: 0;
-  }
-  @include to('s') {
-    text-align: center;
-  }
+  line-height: 1.2;
   h2 {
     margin-bottom: 29px;
     padding-top: 28px;
-    @include to('l') {
-      line-height: 1.2;
-    }
-    @include to('m') {
-      margin-bottom: 16px;
-      padding-top: 10px;
-    }
-  }
-  p {
-    line-height: 1.3;
-    @include to('l') {
-      line-height: 1.2;
-    }
-    @include from('l') {
-      font-size: 18px;
-    }
-    @include to('s') {
-      text-align: left;
-    }
   }
 }

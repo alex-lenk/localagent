@@ -11,30 +11,6 @@
 
 .single-post-top {
   margin-bottom: 20px;
-  @include from('m') {
-    padding-right: 115px;
-    display: flex;
-    align-items: center;
-    position: relative;
-    .pagination-prev, .pagination-next {
-      margin-right: 30px;
-    }
-  }
-  @include to('s') {
-    .pagination-prev, .pagination-next {
-      position: absolute;
-      top: 10px;
-      left: 25px;
-      z-index: 1;
-      a {
-        border: none !important;
-        background-color: #6ba0b2;
-      }
-      svg {
-        fill: #ffffff;
-      }
-    }
-  }
   .pagination-prev, .pagination-next {
     a {
       display: inline-block;
@@ -55,9 +31,6 @@
 
 .single-post-title {
   margin-bottom: 0;
-  @include to('xs') {
-    font-size: 6vw;
-  }
 }
 
 .align-left {
@@ -65,17 +38,4 @@
   float: left;
   margin-right: 30px;
   margin-bottom: 15px;
-  @include to('m') {
-    max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    float: none;
-    display: block;
-  }
-}
-
-.single-post-media {
-  @include to('s') {
-    margin-bottom: 20px;
-  }
 }

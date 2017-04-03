@@ -1,25 +1,11 @@
 .header-home {
   width: 100%;
-  background: url(../img/bg-home-header.jpg);
+  height: 880px;
+  background-image: url(../img/bg-home-header.jpg);
   background-repeat: no-repeat;
-  @include from('s') {
-    height: 885px;
-    background-position: center -150px;
-    background-size: cover;
-  }
-  @include to('xs') {
-    height: 46vh;
-    background-image: url(../img/bg-home-header.jpg);
-    background-size: 243vw;
-    background-position: -38vw 0vw;
-  }
+  background-position: center 0;
+
   .header-center {
     padding-top: 175px;
-    @include to('l') {
-      padding-top: 180px;
-    }
-    @include to('xs') {
-      padding-top: 74px;
-    }
   }
 }

@@ -1,36 +1,9 @@
 footer {
-  padding-top: 159px;
+  padding-top: 157px;
   padding-bottom: 70px;
   position: relative;
   color: #ffffff;
-  background: url(../img/bg-footer-img.jpg) no-repeat left top;
-  background-size: cover;
-  @include to('xs') {
-    background-position: 49% 100%;
-    background-size: 820%;
-  }
-  @include to('s') {
-    padding-top: 130px;
-    padding-bottom: 45px;
-    .logo {
-      margin-bottom: 40px;
-      text-align: center;
-    }
-    .logo-wrap {
-      display: inline-flex;
-    }
-    img {
-      align-self: flex-start;
-    }
-    .logo-caption {
-      font-size: 26px;
-    }
-    .logo-text {
-      top: 6px;
-      font-size: 12px;
-      display: block;
-    }
-  }
+  background: url(../img/bg-footer-img.jpg) no-repeat center;
   a {
     color: #ffffff;
   }
@@ -50,11 +23,6 @@ footer {
     width: 100%;
     height: 99px;
     background: url(../img/bg-footer-decor.png) no-repeat top center;
-    @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-    only screen and (min-resolution: 144dpi),
-    only screen and (min--moz-device-pixel-ratio: 1.5) {
-      background: url(../img/bg-footer-decor@x2.png) no-repeat top center;
-    }
     background-size: cover;
     content: '';
     position: absolute;
@@ -98,60 +66,9 @@ footer {
   margin: 43px 0 0;
   font-size: 0;
   list-style: none;
-  @include from('l') {
-    margin-top: 37px;
-    padding-left: 65px;
-  }
-  @include at('m') {
-    margin-top: 4px;
-    padding-left: 55px;
-  }
-  @include at('l') {
-    padding-right: 60px;
-    display: flex;
-    flex-wrap: wrap;
-  }
-  @include to('s') {
-    max-width: 414px;
-    margin: 0 auto 35px;
-    float: none;
-    clear: both;
-    display: flex;
-    justify-content: space-around;
-    li {
-      @include to('xs') {
-        font-size: 4.4vw;
-      }
-    }
-  }
   li {
     margin-bottom: 15px;
     font-size: 17px;
-    @include from('xl') {
-      &:not(:last-of-type) {
-        margin-right: 31px;
-      }
-    }
-    @include from('l') {
-      margin-bottom: 0;
-      display: inline-block;
-      vertical-align: top;
-    }
-    @include at('l') {
-      &:not(:nth-child(1)):not(:nth-child(3)) {
-        order: 3;
-      }
-      &:nth-child(3) {
-        order: 2;
-      }
-      &:first-of-type {
-        margin-right: 68px;
-        margin-bottom: 22px;
-      }
-      &:last-of-type {
-        margin-left: 74px;
-      }
-    }
   }
   a {
     border-bottom: 1px solid transparent;
@@ -166,22 +83,10 @@ footer {
   padding-top: 42px;
   text-align: right;
   position: relative;
-  @include to('l') {
-    padding-top: 37px;
-  }
-  @include to('s') {
-    max-width: 280px;
-    margin: 0 auto;
-    padding: 0;
-    float: none;
-  }
   .btn {
     position: absolute;
     right: 17px;
     bottom: 10px;
-    @include to('s') {
-      right: 5px;
-    }
     &:hover {
       opacity: .8;
     }
@@ -200,17 +105,6 @@ footer {
   border-bottom-color: #ffffff;
   font-size: 16px;
   color: #ffffff;
-  @include from('l') {
-    min-width: 295px;
-  }
-  @include at('m') {
-    min-width: 219px;
-    padding-left: 5px;
-  }
-  @include to('s') {
-    padding-left: 8px;
-    width: 100%;
-  }
   &::-webkit-input-placeholder {
     color: #ffffff;
     font-size: 16px;
@@ -229,32 +123,11 @@ footer {
   padding-top: 35px;
   display: flex;
   align-items: center;
-  @include from('m') {
-    justify-content: space-between;
-  }
-  @include to('l') {
-    padding-top: 12px;
-  }
-  @include at('m') {
-    padding-top: 0;
-    margin-top: -25px;
-  }
-  @include to('s') {
-    padding-top: 44px;
-    flex-direction: column;
-  }
 }
 
 .copyright {
   font-size: 15px;
   margin-top: 5px;
-  @include from('xl') {
-    padding-left: 42px;
-  }
-  @include to('s') {
-    order: 2;
-    margin-top: 38px;
-  }
 }
 
 .social {
@@ -274,10 +147,6 @@ footer {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    @include at('m') {
-      width: 39px;
-      height: 39px;
-    }
     &:hover {
       background-color: #505b6a;
       .ok, .fb, .vk {
@@ -290,9 +159,5 @@ footer {
     height: 20px;
     fill: #c0b7b7;
     transition: all 0.3s ease;
-    @include at('m') {
-      width: 19px;
-      height: 19px;
-    }
   }
 }

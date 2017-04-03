@@ -1,50 +1,18 @@
 .latest-articles {
   padding: 103px 0 75px;
   background-color: #f9fbff;
-  @include to('l') {
-    padding: 97px 0 75px;
-  }
-  @include to('m') {
-    padding: 70px 0 75px;
-  }
   .title {
     text-align: center;
     margin-bottom: 95px;
-    @include to('m') {
-      margin-bottom: 65px;
-    }
   }
   img {
     max-height: 222px;
-    @include to('xs') {
-      display: none;
-    }
   }
 }
 
 .latest-articles-list {
   display: flex;
   flex-wrap: wrap;
-  @include from('s') {
-    justify-content: space-between;
-  }
-  li {
-    @include from('l') {
-      flex-basis: 33%;
-      max-width: 33%;
-      padding: 0 15px;
-    }
-    @include between('s', 'm') {
-      flex-basis: 48%;
-    }
-    @media (max-width: 500px) {
-      flex-basis: 100%;
-      margin-bottom: 35px;
-      img {
-        max-height: none;
-      }
-    }
-  }
 }
 
 .latest-articles-media {
@@ -70,13 +38,6 @@
   display: inline-block;
   font-size: 16px;
   @include RobotoMedium;
-  @include to('l') {
-    padding: 20px 0 13px;
-    line-height: 1.2;
-  }
-  @include at('l') {
-    min-height: 71px;
-  }
 }
 
 .latest-articles-text {
@@ -87,10 +48,7 @@
 .latest-articles-date {
   color: #b0aaaa;
   font-size: 15px;
-  @include Rubik;
-  @include to('l') {
-    font-size: 14px;
-  }
+  @include RobotoMedium;
 }
 
 .latest-articles-all {

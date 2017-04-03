@@ -1,27 +1,5 @@
 .about-advantages {
   padding-top: 35px;
-  @include from('m') {
-    padding-top: 20px;
-  }
-  @include from('l') {
-    padding-top: 40px;
-  }
-  @include at('m') {
-    .col-sm-6 {
-      padding-left: 20px;
-      padding-right: 20px;
-    }
-  }
-  @include to('s') {
-    .col-sm-6 {
-      max-width: 345px;
-      margin: 0 auto;
-      float: none;
-      &:not(.about-advantages-last) {
-        margin-bottom: 45px;
-      }
-    }
-  }
   img {
     max-height: 215px;
     transition: all 0.3s ease;
@@ -33,9 +11,6 @@
 
 .about-advantages-title {
   margin-bottom: 35px;
-  @include from('m') {
-    margin-bottom: 65px;
-  }
 }
 
 .about-advantages-text {
@@ -44,15 +19,6 @@
   font-size: 16px;
 }
 
-@include at('m') {
-  .about-advantages-last {
-    padding-top: 45px;
-  }
-}
-
 .about-advantages-bottom {
   padding-top: 55px;
-  @include from('l') {
-    padding-top: 70px;
-  }
 }

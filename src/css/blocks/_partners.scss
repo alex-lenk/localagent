@@ -1,17 +1,6 @@
 .partners {
   padding-top: 90px;
   padding-bottom: 115px;
-  @include to('l') {
-    padding-bottom: 90px;
-  }
-  @include to('m') {
-    padding-top: 45px;
-    padding-bottom: 140px;
-  }
-  @include to('s') {
-    padding-top: 20px;
-    padding-bottom: 95px;
-  }
 }
 
 .partners-hint {
@@ -20,18 +9,12 @@
   color: #6ba0b2;
   text-align: right;
   font-style: italic;
-  @include to('s') {
-    margin-bottom: 30px;
-  }
   .move {
     margin: 2px 0 0 10px;
     width: 24px;
     height: 27px;
     fill: #4f8ad9;
     vertical-align: bottom;
-    @include to('s') {
-      width: 27px;
-    }
   }
 }
 
@@ -47,8 +30,5 @@
   }
   img {
     max-width: 80%;
-    @include from('m') {
-      max-width: 190px;
-    }
   }
 }

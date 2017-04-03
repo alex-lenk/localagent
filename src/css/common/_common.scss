@@ -53,9 +53,6 @@ h1 {
 h2 {
   font-size: 28px;
   @include RobotoMedium;
-  @include to('m') {
-    font-size: 26px;
-  }
 }
 
 h3 {
@@ -127,9 +124,6 @@ h4 {
   @include from('m') {
     font-size: 30px;
   }
-  @include from('l') {
-    font-size: 33px;
-  }
 }
 
 button, input, select, textarea {
@@ -176,11 +170,13 @@ button, input, select, textarea {
     fill: #505b6a;
   }
   li {
+    text-align: left;
     cursor: pointer;
     @include RobotoRegular;
     &:not(:last-of-type) {
       margin-bottom: 25px;
     }
+    color: #505b6a;
     &:hover {
       color: #4f8ad9;
       .arrow {

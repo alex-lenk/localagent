@@ -1,12 +1,6 @@
 .content-page {
   padding-top: 30px;
   padding-bottom: 80px;
-  @include at('m') {
-    padding-bottom: 110px;
-  }
-  @include from('l') {
-    padding-bottom: 120px;
-  }
   h2 {
     margin-bottom: 15px;
   }

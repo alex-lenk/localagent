@@ -2,9 +2,7 @@ header {
   padding-top: 30px;
   position: relative;
   color: #ffffff;
-  @include at('l') {
-    padding-top: 37px;
-  }
+
   a {
     color: #ffffff;
   }
@@ -19,73 +17,28 @@ header {
     top: 0;
     left: 0;
     z-index: 5;
-    @include to('s') {
-      background-position: 32% 0;
-    }
-    @include to('xs') {
-      opacity: .8;
-    }
   }
   &::after {
     width: 100%;
-    height: 141px;
+    height: 128px;
     background-repeat: no-repeat;
     background-image: url(../img/bg-header-line.png);
     background-position: top center;
-    background-size: cover;
     content: '';
     position: absolute;
     bottom: 0;
     left: 0;
     z-index: 6;
-
-    @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-    only screen and (min-resolution: 144dpi),
-    only screen and (min--moz-device-pixel-ratio: 1.5) {
-      background-image: url(../img/bg-header-line@x2.png);
-    }
-    @include to('xs') {
-      height: 6vh;
-      background-size: 185vw 26vw;
-      background-position: -17vw 0vw;
-    }
   }
   .container {
     position: relative;
     z-index: 7;
   }
-
-  @include to('s') {
-    .logo {
-      width: 230px;
-    }
-    .logo-wrap img {
-      width: 62px;
-    }
-    .logo-caption {
-      font-size: 22px;
-    }
-    .logo-text {
-      font-size: 10px;
-      display: block;
-      top: 5px;
-    }
-  }
-
   .header-title {
     margin-bottom: 25px;
-    @include to('s') {
-      font-size: 6.8vw;
-    }
-    @include to('xs') {
-      margin-bottom: 15px;
-    }
   }
   .intro-text {
     margin-bottom: 105px;
-    @include to('xs') {
-      margin-bottom: 39px;
-    }
   }
 }
 
@@ -94,15 +47,6 @@ header {
   padding-right: 15px;
   text-align: center;
   clear: both;
-  @include from('l') {
-    padding-left: 9%;
-    padding-right: 9%;
-  }
-
-  @include from('xl') {
-    padding-left: 15%;
-    padding-right: 15%;
-  }
 }
 
 .header-title {
@@ -116,7 +60,4 @@ header {
 .intro-text {
   line-height: 1.2;
   font-size: 18px;
-  @include to('xs') {
-    font-size: 4.4vw;
-  }
 }
