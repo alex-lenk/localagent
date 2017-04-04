@@ -1,8 +1,4 @@
 .header-about {
   background: url(../img/bg-about-us.jpg) no-repeat 0 0;
   background-size: cover;
-  &::before {
-    opacity: .7;
-    background-position: 0 0;
-  }
 }

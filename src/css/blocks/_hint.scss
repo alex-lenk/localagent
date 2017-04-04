@@ -52,9 +52,9 @@
 }
 
 .hint-block {
-  height: 80px;
+  min-height: 80px;
   margin-top: 20px;
-  padding: 0 30px 0 103px;
+  padding: 15px 30px 15px 103px;
   border-radius: 10px;
   border: 2px solid #f2f9fb;
   position: relative;

@@ -7,17 +7,11 @@ body {
   @include RobotoLight;
 }
 
-body {
-  min-width: 320px;
-  overflow-x: hidden;
-}
-
 a, .as-link {
   color: #4f8ad9;
   text-decoration: none;
   transition: all 0.3s ease;
-  &:hover,
-  &:focus {
+  &:hover {
     color: #4f8ad9;
   }
   &:focus {
@@ -135,78 +129,4 @@ button, input, select, textarea {
 
 .text-selection {
   color: #6ba0b2;
-}
-
-.make-choice {
-  width: 292px;
-  height: 225px;
-  padding: 36px 21px 29px 33px;
-  border-radius: 32px;
-  background-color: #ffffff;
-  box-shadow: 0 0 35px 0 rgba(0, 0, 0, 0.18);
-  position: absolute;
-  top: 100%;
-  right: 0;
-  margin-top: 17px;
-  z-index: 96;
-  display: none;
-  &::before {
-    content: '';
-    position: absolute;
-    top: -18px;
-    right: 36px;
-    width: 0;
-    height: 0;
-    border: 8px solid transparent;
-    border-bottom: 10px solid #ffffff;
-  }
-}
-
-.make-choice-list {
-  cursor: pointer;
-  .arrow {
-    width: 10px;
-    height: 10px;
-    fill: #505b6a;
-  }
-  li {
-    text-align: left;
-    cursor: pointer;
-    @include RobotoRegular;
-    &:not(:last-of-type) {
-      margin-bottom: 25px;
-    }
-    color: #505b6a;
-    &:hover {
-      color: #4f8ad9;
-      .arrow {
-        fill: #4f8ad9;
-      }
-    }
-  }
-}
-
-.make-choice-active {
-  display: block;
-}
-
-.select-open {
-  + .arrow {
-    width: 17px;
-    height: 12px;
-    transform: rotate(90deg);
-    fill: #c0b7b7;
-    position: absolute;
-    top: 50%;
-    right: 33px;
-    margin-top: -6px;
-    z-index: 18;
-  }
-}
-
-.select-active {
-  + .arrow {
-    transform: rotate(-90deg);
-    fill: #4f8ad9;
-  }
 }

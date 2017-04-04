@@ -2,16 +2,10 @@ header {
   padding-top: 30px;
   position: relative;
   color: #ffffff;
-
-  a {
-    color: #ffffff;
-  }
   &::before {
     width: 100%;
     height: 100%;
-    background: url(../img/bg-header.png) no-repeat 0 0;
-    opacity: .9;
-    background-size: cover;
+    background: url(../img/header-bg.png) no-repeat top left;
     content: '';
     position: absolute;
     top: 0;
@@ -29,6 +23,9 @@ header {
     bottom: 0;
     left: 0;
     z-index: 6;
+  }
+  a {
+    color: #ffffff;
   }
   .container {
     position: relative;

@@ -13,6 +13,7 @@
     font-size: 15px;
     border-radius: 30px;
     text-transform: uppercase;
+    box-shadow: 0 8px 12px rgba(79, 138, 217, 0.24);
     @include RobotoBold;
     .arrow-right {
       width: 20px;
@@ -46,7 +47,7 @@
     border-radius: 30px;
     text-transform: uppercase;
     border: 2px solid #4f8ad9;
-    box-shadow: 0 8px 12px 0 rgba(79, 138, 217, 0.25);
+    box-shadow: 0 8px 12px rgba(79, 138, 217, 0.25);
     @include RobotoBold;
     &:hover, &:active {
       background-color: #4f8ad9;
@@ -79,11 +80,7 @@
     color: #4f8ad9;
     border-radius: 32px;
     background-color: #ffffff;
-    box-shadow: 0 8px 12px 3px rgba(79, 138, 217, 0.25);
-    @include to('xs') {
-      padding: 18px 20px 15px 20px;
-      font-size: 3.9vw;
-    }
+    box-shadow: 0 8px 12px rgba(79, 138, 217, 0.25);
     @include RobotoBold;
     svg {
       fill: #4f8ad9;
@@ -101,7 +98,6 @@
       vertical-align: top;
       margin-top: 1px;
     }
-
     &:hover {
       background-color: #505b6a;
       color: #ffffff;
@@ -114,6 +110,7 @@
   &-back {
     text-transform: uppercase;
     font-size: 15px;
+    color: #505b6a;
     @include RobotoBold;
     &:hover {
       color: #4f8ad9;

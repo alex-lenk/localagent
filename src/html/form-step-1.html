@@ -10,7 +10,7 @@
             <!-- include "temp/logo.html" -->
             <h1 class="header-title col-md-12">Автострахование для вашего BMW</h1>
             <div class="clock-info">
-                Это займет всего 2 минуты
+                <div class="clock-info-text">Это займет всего 2 минуты</div>
             </div>
         </div>
     </div>
@@ -18,14 +18,9 @@
 
 <section class="form-insurance container">
     <div class="row">
-        <ul class="insurance-type">
-            <li class="insurance-type-label">Тип страховки:</li>
-            <li class="current insurance-type-point">КАСКО</li>
-            <li class="insurance-type-point">Осаго</li>
-        </ul>
 
         <aside class="insurance-steps-wrap col-md-3 col-xs-12">
-            <ol class="insurance-steps">
+            <ol class="insurance-steps-first insurance-steps">
                 <li class="current">
                     <svg class="auto">
                         <use xlink:href="img/sprite.svg#auto"></use>
@@ -67,6 +62,12 @@
         </aside>
 
         <form action="#" class="form-insurance-field col-md-9">
+            <ul class="insurance-type">
+                <li class="insurance-type-label">Тип страховки:</li>
+                <li class="current insurance-type-point">КАСКО</li>
+                <li class="insurance-type-point">Осаго</li>
+            </ul>
+
             <div class="form-group required-field">
                 <input type="text" class="form-control hide-placeholder select-open" placeholder="Выберите Марку">
 
@@ -553,13 +554,14 @@
                 </div>
 
                 <div class="form-group form-data">
-                    <input type="text" class="form-control hide-placeholder datepicker-here"
-                           data-position="bottom right"
-                           placeholder="Дата окончания текущего полиса">
+                    <div class="form-data-wrap">
+                        <input type="text" class="form-control hide-placeholder datepicker-here"
+                           data-position="bottom right" placeholder="Дата окончания текущего полиса">
 
-                    <svg class="data">
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#data"></use>
-                    </svg>
+                        <svg class="data">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#data"></use>
+                        </svg>
+                    </div>
 
                     <div class="hint-block">
                         <div class="hint-block-icons">

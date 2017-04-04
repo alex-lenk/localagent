@@ -1,16 +1,13 @@
 .about-advantages {
   padding-top: 35px;
-  img {
-    max-height: 215px;
-    transition: all 0.3s ease;
-    &:hover {
-      transform: scale(1.1);
-    }
-  }
 }
 
 .about-advantages-title {
   margin-bottom: 35px;
+}
+
+.about-advantages-media {
+  height: 230px;
 }
 
 .about-advantages-text {

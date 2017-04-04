@@ -9,6 +9,7 @@
 
 /* common */
 @import "common/common";
+@import "blocks/make-choice";
 
 @import "blocks/datepicker";
 @import "blocks/hint";
@@ -23,7 +24,6 @@
 @import "blocks/header/header";
 @import "blocks/header/header-home";
 @import "blocks/page-blocks/header-about";
-@import "blocks/header/logo";
 @import "blocks/header/navbar";
 @import "blocks/header/insurance";
 
@@ -42,3 +42,7 @@
 @import "blocks/search-page";
 @import "blocks/form-insurance";
 @import "blocks/insurance-steps";
+
+.wrapper {
+  width: 100%;
+}

@@ -105,3 +105,22 @@
   width: 11px;
   height: 13px;
 }
+
+.datepicker--cell.-selected-,
+.datepicker--cell.-selected-.-current- {
+  color: #4f8ad9;
+  background: #e3e3e3;
+  border-radius: 10px;
+  width: 34px;
+  height: 20px;
+  margin-top: 6px;
+  transition: all 0.3s ease;
+}
+.datepicker--cell.-selected-:hover,
+.datepicker--cell.-selected-.-current-:hover {
+  background-color: #4f8ad9;
+  color: #ffffff;
+}
+.datepicker--cell.-current-.-focus- {
+  color: #ffffff;
+}

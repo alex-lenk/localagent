@@ -1,10 +1,6 @@
 .header-contacts {
   background: url(../img/bg-contacts.jpg) no-repeat 0 0;
   background-size: cover;
-  &::before {
-    opacity: .7;
-    background-position: 0 0;
-  }
 }
 
 .contacts {
@@ -50,6 +46,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 0 0 20px rgba(#000000, .1);
   .message {
     width: 27px;
     height: 24px;

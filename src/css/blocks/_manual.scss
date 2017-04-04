@@ -1,6 +1,6 @@
 .manual {
-  padding-top: 15px;
-  padding-bottom: 143px;
+  padding-top: 23px;
+  padding-bottom: 150px;
   .container {
     @include clearfix;
   }
@@ -37,13 +37,13 @@
       box-shadow: none;
     }
     &::before {
-      right: 19%;
+      right: 16%;
       content: '1';
       top: 10px;
     }
   }
-  .manual-text {
-    width: 480px;
+  .manual-text h2 {
+    padding-top: 52px;
   }
 }
 
@@ -51,11 +51,9 @@
   padding: 122px 0 152px;
   background: url(../img/top-decor-line.png) no-repeat top center, url(../img/bottom-decor-line.png) no-repeat bottom center;
   .manual-text {
-    width: 465px;
     margin: 0 125px 0 32px;
   }
   .manual-media {
-    width: 485px;
     text-align: center;
     &::before {
       left: -27px;
@@ -67,15 +65,11 @@
 .manual-three {
   padding-top: 60px;
   .manual-media {
-    max-width: 445px;
     margin: 0 110px 0 32px;
     &::before {
       right: -29px;
       content: '3';
     }
-  }
-  .manual-text {
-    width: 530px;
   }
 }
 
@@ -107,7 +101,6 @@
 }
 
 .manual-text {
-  float: left;
   line-height: 1.2;
   h2 {
     margin-bottom: 29px;
