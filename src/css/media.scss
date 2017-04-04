@@ -883,6 +883,13 @@
     margin-top: 38px;
   }
 
+  .insurance-agent-face .user {
+    width: 28px;
+    height: 31px;
+    top: 19px;
+    left: 21px;
+  }
+
   .header-contacts {
     background-size: cover;
     background-position: 57% top;
@@ -1593,10 +1600,15 @@
     }
   }
 
+  .insurance-agent-face .user {
+    left: 11px;
+  }
+
   .statistics .swiper-slide {
     max-width: 320px;
     padding: 0 15px;
   }
+
   .footer-nav {
     margin-top: 4px;
     padding-left: 55px;
@@ -1828,17 +1840,29 @@ only screen and (min--moz-device-pixel-ratio: 1.5) {
   }
 }
 
-@include at('m') {
-  .insurance-agent-face .user {
-    left: 11px;
+@media (min-width: 1921px) {
+  .header-home {
+    background-position: 50% 29%;
   }
-}
-
-@include to('s') {
-  .insurance-agent-face .user {
-    width: 28px;
-    height: 31px;
-    top: 19px;
-    left: 21px;
+  header {
+    background-size: cover;
+    &::after {
+      background-size: 112% auto;
+    }
+    &::before {
+      background-size: cover;
+    }
+  }
+  .manual-two {
+    background-size: 100% auto;
+  }
+  .statistics::before {
+    background-size: cover;
+  }
+  footer::after {
+    background-size: cover;
+  }
+  .page footer::after {
+    background-size: 110% auto;
   }
 }

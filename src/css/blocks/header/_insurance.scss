@@ -138,3 +138,56 @@
     }
   }
 }
+
+.brand, .model, .year {
+  float: left;
+  position: relative;
+  .selected {
+    width: 15px;
+    height: 12px;
+    position: absolute;
+    top: 50%;
+    margin-top: -6px;
+    fill: #a7c343;
+  }
+  .arrow {
+    width: 17px;
+    height: 12px;
+    transform: rotate(90deg);
+    fill: #c0b7b7;
+    position: absolute;
+    top: 50%;
+    right: 23px;
+    margin-top: -6px;
+    z-index: 18;
+  }
+}
+
+.model, .year {
+  .insurance-input {
+    padding-left: 45px;
+  }
+  .selected {
+    left: 22px;
+  }
+}
+
+.brand {
+  width: 36.5%;
+  border-right: 1px solid #ededed;
+  .insurance-input {
+    padding-left: 59px;
+  }
+  .selected {
+    left: 37px;
+  }
+}
+
+.model {
+  width: 35%;
+  border-right: 1px solid #ededed;
+}
+
+.year {
+  width: 26.5%;
+}

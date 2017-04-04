@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta http-equiv="Cache-Control" content="no-cache">
+
+    <meta charset="UTF-8">
+    <title>LocalAgent</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+    <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
+    <meta content="telephone=no" name="format-detection">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/media.css">
+
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="img/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="img/favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="img/favicon/manifest.json">
+    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#288db3">
+    <meta name="theme-color" content="#ffffff">
+
+</head>
+<body class="page">
+<header class="header-form-insurance">
+    <div class="container">
+        <div class="row">
+            <div class="logo col-md-3 col-sm-4 col-xs-10">
+                <a href="index.html">
+                    <img src="img/logo.png" alt="LocalAgent - Умное страхование">
+                </a>
+            </div>
+
+            <h1 class="header-title col-md-12">Автострахование для вашего BMW</h1>
+            <div class="clock-info">
+                Это займет всего 2 минуты
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="form-insurance container">
+    <div class="row">
+        <aside class="insurance-steps-wrap col-md-3 col-xs-12">
+            <ol class="insurance-steps">
+                <li>
+                    <svg class="auto">
+                        <use xlink:href="img/sprite.svg#auto"></use>
+                    </svg>
+
+                    <svg class="selected">
+                        <use xlink:href="img/sprite.svg#selected"></use>
+                    </svg>
+
+                    <div class="arrow-right">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#arrow-right"></use>
+                        </svg>
+                    </div>
+
+                    <span class="insurance-steps-text"><span class="insurance-steps-number">1.</span> Автомобиль</span>
+                </li>
+                <li class="current">
+                    <svg class="driver">
+                        <use xlink:href="img/sprite.svg#driver"></use>
+                    </svg>
+
+                    <div class="arrow-right">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#arrow-right"></use>
+                        </svg>
+                    </div>
+
+                    <span class="insurance-steps-text"><span class="insurance-steps-number">2.</span> Водитель</span>
+                </li>
+                <li>
+                    <svg class="list">
+                        <use xlink:href="img/sprite.svg#list"></use>
+                    </svg>
+                    <span class="insurance-steps-text"><span class="insurance-steps-number">3.</span> Результат</span>
+
+                </li>
+            </ol>
+        </aside>
+
+
+        <form action="#" class="form-insurance-field col-md-9">
+            <div class="form-group required-field">
+                <input type="text" class="form-control hide-placeholder" placeholder="ФИО">
+            </div>
+            <div class="form-group form-data required-field">
+                <input type="text" class="form-control hide-placeholder datepicker-here" data-position="bottom right"
+                       placeholder="Дата Рождения">
+
+                <svg class="data">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#data"></use>
+                </svg>
+            </div>
+
+            <fieldset>
+                <div class="add-form">
+                    <h4>Информация о водителе</h4>
+                    <button type="button" class="add-form-link btn">+ Добавить водителя</button>
+                </div>
+
+                <div class="add-info">
+                    <div class="add-info-label">
+                        <div class="add-info-label-text">Водитель 1</div>
+                        <div class="add-info-label-delete">Удалить</div>
+                    </div>
+
+                    <div class="form-group box-gender">
+                        <input type="text" class="form-control hide-placeholder select-open" placeholder="Пол">
+
+                        <svg class="arrow">
+                            <use xlink:href="img/sprite.svg#arrow"></use>
+                        </svg>
+
+                        <div class="make-choice">
+                            <ul class="make-choice-list list-unstyled">
+                                <li>
+                                    <svg class="arrow">
+                                        <use xlink:href="img/sprite.svg#list-arrow"></use>
+                                    </svg>
+                                    Мужской
+                                </li>
+                                <li>
+                                    <svg class="arrow">
+                                        <use xlink:href="img/sprite.svg#list-arrow"></use>
+                                    </svg>
+                                    Женский
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="form-group box-status">
+                        <input type="text" class="form-control hide-placeholder select-open" placeholder="Статус">
+
+                        <svg class="arrow">
+                            <use xlink:href="img/sprite.svg#arrow"></use>
+                        </svg>
+
+                        <div class="make-choice">
+                            <ul class="make-choice-list list-unstyled">
+                                <li>
+                                    <svg class="arrow">
+                                        <use xlink:href="img/sprite.svg#list-arrow"></use>
+                                    </svg>
+                                    Статус 1
+                                </li>
+                                <li>
+                                    <svg class="arrow">
+                                        <use xlink:href="img/sprite.svg#list-arrow"></use>
+                                    </svg>
+                                    Статус 2
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="form-group form-data box-data">
+                        <input type="text" class="form-control hide-placeholder datepicker-here"
+                               data-position="bottom right" placeholder="Дата Рождения">
+
+                        <svg class="data">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#data"></use>
+                        </svg>
+                    </div>
+
+                    <div class="form-group box-experience">
+                        <input type="text" class="form-control hide-placeholder" placeholder="Стаж">
+                    </div>
+                </div>
+
+                <div class="add-info">
+                    <div class="add-info-label">
+                        <div class="add-info-label-text">Водитель 1</div>
+                        <div class="add-info-label-delete">Удалить</div>
+                    </div>
+
+                    <div class="form-group box-gender">
+                        <input type="text" class="form-control hide-placeholder select-open" placeholder="Пол">
+
+                        <svg class="arrow">
+                            <use xlink:href="img/sprite.svg#arrow"></use>
+                        </svg>
+
+                        <div class="make-choice">
+                            <ul class="make-choice-list list-unstyled">
+                                <li>
+                                    <svg class="arrow">
+                                        <use xlink:href="img/sprite.svg#list-arrow"></use>
+                                    </svg>
+                                    Мужской
+                                </li>
+                                <li>
+                                    <svg class="arrow">
+                                        <use xlink:href="img/sprite.svg#list-arrow"></use>
+                                    </svg>
+                                    Женский
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="form-group box-status">
+                        <input type="text" class="form-control hide-placeholder select-open" placeholder="Статус">
+
+                        <svg class="arrow">
+                            <use xlink:href="img/sprite.svg#arrow"></use>
+                        </svg>
+
+                        <div class="make-choice">
+                            <ul class="make-choice-list list-unstyled">
+                                <li>
+                                    <svg class="arrow">
+                                        <use xlink:href="img/sprite.svg#list-arrow"></use>
+                                    </svg>
+                                    Статус 1
+                                </li>
+                                <li>
+                                    <svg class="arrow">
+                                        <use xlink:href="img/sprite.svg#list-arrow"></use>
+                                    </svg>
+                                    Статус 2
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="form-group form-data box-data">
+                        <input type="text" class="form-control hide-placeholder datepicker-here"
+                               data-position="bottom right" placeholder="Дата Рождения">
+
+                        <svg class="data">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#data"></use>
+                        </svg>
+                    </div>
+
+                    <div class="form-group box-experience">
+                        <input type="text" class="form-control hide-placeholder" placeholder="Стаж">
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <div class="form-group required-field">
+                    <input type="text" class="form-control hide-placeholder"
+                           placeholder="Регион регистрации собственника">
+                </div>
+            </fieldset>
+
+            <section class="contacts-form-info">
+                <h2 class="contacts-form-info-title">Контактная информация</h2>
+
+                <fieldset>
+                    <div class="form-group required-field">
+                        <input type="text" class="form-control hide-placeholder" placeholder="Адрес проживания">
+                    </div>
+
+                    <div class="hint-block">
+                        <div class="hint-block-icons">
+                            <svg class="ex-point">
+                                <use xlink:href="img/sprite.svg#ex-point"></use>
+                            </svg>
+                        </div>
+                        <div class="hint-block-text">
+                            Данная ифнормация нужна исключительно для определния максмально близко-доступных к вам
+                            Агентов.
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <div class="form-half">
+                        <div class="form-group field-filled required-field">
+                            <input type="text" class="form-control hide-placeholder select-open"
+                                   placeholder="Номер телефона" value="+7 (999) 905-28-32 ">
+                            <svg class="selected">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                     xlink:href="img/sprite.svg#selected"></use>
+                            </svg>
+                        </div>
+
+                        <div class="form-group required-field">
+                            <input type="email" class="form-control hide-placeholder" placeholder="Электронная почта">
+                        </div>
+                        <div class="hint-block">
+                            <div class="hint-block-icons">
+                                <svg class="ex-point">
+                                    <use xlink:href="img/sprite.svg#ex-point"></use>
+                                </svg>
+                            </div>
+                            <div class="hint-block-text">
+                                Ненавидите спам? Мы тоже! Заполяняя свои контактные данные мы гарантируем, что
+                                колличество
+                                страховых агентов, которые будут иметь доступ к вашим данных, будет не более 3-ех
+                                человек
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <h4>Удобное вермя для связи?</h4>
+
+                    <div class="form-hours form-group">
+                        <input type="text" class="form-control hide-placeholder" placeholder="8:00">
+                        <span class="tire">-</span>
+                        <input type="text" class="form-control hide-placeholder" placeholder="19:00">
+                    </div>
+                </fieldset>
+
+                <label class="checkbox-custom-label">
+                    <input type="checkbox" name="" class="checkbox-custom">
+                    <span class="checkbox-custom-view">Я принимаю <a href="#" target="_blank">условия передачи информации</a></span>
+                </label>
+            </section>
+
+            <div class="form-insurance-bottom text-right">
+                <button class="btn btn-back">
+                    <svg class="arrow-right">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#arrow-right"></use>
+                    </svg>
+                    <span class="hidden-xs">Вернуться</span> назад
+                </button>
+
+                <button class="btn btn-blue">
+                    Продолжить
+                    <svg class="arrow-right">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#arrow-right"></use>
+                    </svg>
+                </button>
+            </div>
+        </form>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-find-agent">
+        <a href="search.html" class="footer-find-agent_link btn btn-white">Начать поиск Агентов
+            <svg class="search">
+                <use xlink:href="img/sprite.svg#search"></use>
+            </svg>
+        </a>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="logo col-md-3 col-sm-4 col-xs-12">
+                <a href="index.html" class="logo-wrap"><img src="img/logo.png" alt="LocalAgent - Умное страхование"></a>
+            </div>
+
+            <ul class="footer-nav col-md-5 col-sm-4 col-xs-12">
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="blog.html">Блог</a></li>
+                <li><a href="faq.html">Вопросы/Ответы</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+
+            <form action="#" class="footer-subscribe col-md-4 col-sm-4 col-xs-12">
+                <input type="email" class="footer-subscribe-input hide-placeholder hidden-sm hidden-xs"
+                       placeholder="Подписаться на рассылку">
+                <input type="email" class="footer-subscribe-input hide-placeholder visible-xs visible-sm"
+                       placeholder="Подписаться">
+                <button class="btn">
+                    <svg class="letter">
+                        <use xlink:href="img/sprite.svg#letter"></use>
+                    </svg>
+                </button>
+            </form>
+
+            <div class="footer-bottom col-md-12 col-sm-12 col-xs-12">
+                <div class="copyright">© 2016-2017. Local Agent.</div>
+
+                <ul class="social list-unstyled">
+                    <li><a href="#" target="_blank">
+                        <svg class="ok">
+                            <use xlink:href="img/sprite.svg#ok"></use>
+                        </svg>
+                    </a></li>
+                    <li><a href="#" target="_blank">
+                        <svg class="fb">
+                            <use xlink:href="img/sprite.svg#fb"></use>
+                        </svg>
+                    </a></li>
+                    <li><a href="#" target="_blank">
+                        <svg class="vk">
+                            <use xlink:href="img/sprite.svg#vk"></use>
+                        </svg>
+                    </a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="js/jquery.js"></script>
+<script src="js/lib.js"></script>
+<script src="js/common.js"></script>
+
+<script src="http://cdn.trackduck.com/toolbar/prod/td.js" async data-trackduck-id="58d6467f8528fe714ed2f9e9"></script>
+
+
+</body>
+</html>
