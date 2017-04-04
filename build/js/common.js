@@ -39,6 +39,10 @@ $(document).ready(function () {
         $(this).toggleClass('datepicker-here-open');
     });
 
+    $('.hint-box').on('click', function () {
+        $(this).toggleClass('hint-box-open');
+    });
+
     var swiper = new Swiper('.partners-carousel', {
         grabCursor: true,
         slidesPerView: 5,

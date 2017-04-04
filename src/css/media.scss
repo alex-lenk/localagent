@@ -995,14 +995,10 @@
     justify-content: flex-end;
 
     .btn-blue {
-      margin-left: 0;
+      margin-left: 70px;
       padding-left: 20px;
       padding-right: 20px;
       white-space: nowrap;
-    }
-    .btn-back {
-      flex-grow: 1;
-      text-align: left;
     }
   }
   .add-form-link {
@@ -1012,7 +1008,7 @@
   }
   .box-gender {
     width: 46%;
-    margin-right: 20px;
+    margin-right: 6%;
   }
   .box-status {
     width: 48%;
@@ -1457,6 +1453,16 @@
   .statistics::before {
     background-position: 25% 50%;
   }
+
+  .form-insurance-bottom {
+    .btn-blue {
+      margin-left: 0;
+    }
+    .btn-back {
+      flex-grow: 1;
+      text-align: left;
+    }
+  }
 }
 
 @include at('l') {
@@ -1520,9 +1526,6 @@
   .header-search {
     padding-left: 30px;
     padding-right: 45px;
-  }
-  .search-panel-top {
-    padding-top: 18px;
   }
   .search-left-open {
     min-width: 420px;
@@ -1677,9 +1680,6 @@
     padding-left: 30px;
     padding-right: 35px;
   }
-  .search-panel-top {
-    padding-top: 16px;
-  }
   .search-left-open {
     flex-basis: 310px;
     min-width: 310px;
@@ -1753,7 +1753,9 @@
       height: 190px;
     }
   }
-
+  .search-panel-top li {
+    font-size: 17px;
+  }
   .manual-one .manual-media::before {
     left: 70%;
   }
@@ -1801,6 +1803,17 @@
   }
   .header-about {
     background-position: 40% 0;
+  }
+  .search-panel-top {
+    padding-top: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    .text-nowrap {
+      margin-right: 7px;
+    }
   }
 }
 

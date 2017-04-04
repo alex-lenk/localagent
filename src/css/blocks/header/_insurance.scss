@@ -84,6 +84,7 @@
     top: 28px;
     right: 43px;
     z-index: 18;
+    cursor: pointer;
   }
 }
 
@@ -149,6 +150,7 @@
     top: 50%;
     margin-top: -6px;
     fill: #a7c343;
+    display: none;
   }
   .arrow {
     width: 17px;
@@ -160,34 +162,53 @@
     right: 23px;
     margin-top: -6px;
     z-index: 18;
+    cursor: pointer;
   }
 }
 
-.model, .year {
-  .insurance-input {
-    padding-left: 45px;
-  }
-  .selected {
-    left: 22px;
-  }
-}
 
 .brand {
-  width: 36.5%;
+  width: 100%;
   border-right: 1px solid #ededed;
-  .insurance-input {
-    padding-left: 59px;
-  }
   .selected {
     left: 37px;
   }
 }
 
 .model {
-  width: 35%;
+  width: 63%;
   border-right: 1px solid #ededed;
 }
 
 .year {
-  width: 26.5%;
+  width: 27%;
+}
+
+
+.selected-good {
+  .insurance-input {
+    padding-left: 45px;
+  }
+  &:first-of-type {
+    width: 37%;
+    .insurance-input {
+      padding-left: 59px;
+    }
+  }
+  &:nth-of-type(2) {
+    width: 36%;
+  }
+  + div {
+    display: block;
+  }
+  .selected {
+    display: block;
+  }
+}
+
+.model, .year {
+  display: none;
+  .selected {
+    left: 22px;
+  }
 }

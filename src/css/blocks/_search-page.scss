@@ -240,10 +240,10 @@ li.search-show-map {
   font-size: 16px;
   line-height: 1.2;
   li:before {
-      counter-increment: item;
-      font-weight: normal;
-      position: absolute;
-      @include RobotoBold;
+    counter-increment: item;
+    font-weight: normal;
+    position: absolute;
+    @include RobotoBold;
   }
 }
 
@@ -299,7 +299,30 @@ li.search-show-map {
     fill: #505b6a;
     position: absolute;
     top: -1px;
-    left: 68px;
+    left: 67px;
+  }
+}
+
+@include at('m') {
+  .insurance-agent-location .location {
+    left: 65px;
+  }
+}
+
+@include at('s') {
+  .insurance-agent-location {
+    padding-left: 115px;
+    .location {
+      left: 88px;
+    }
+  }
+}
+@include to('xs') {
+  .insurance-agent-location {
+    padding-left: 112px;
+    .location {
+      left: 85px;
+    }
   }
 }
 

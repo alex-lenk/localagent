@@ -12,14 +12,14 @@
   z-index: 90;
   cursor: default;
   @include RobotoMedium;
-  &:hover {
-    background-color: #4f8ad9;
-    color: #ffffff;
-    .hint-box-text {
-      visibility: visible;
-      opacity: 1;
-      z-index: 95;
-    }
+}
+.hint-box-open, .hint-box:hover {
+  background-color: #4f8ad9;
+  color: #ffffff;
+  .hint-box-text {
+    visibility: visible;
+    opacity: 1;
+    z-index: 95;
   }
 }
 

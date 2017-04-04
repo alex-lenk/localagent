@@ -77,7 +77,7 @@
   position: relative;
   @include clearfix;
   img {
-    box-shadow: 0 0 45px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 35px 0 rgba(0, 0, 0, 0.18);
   }
   &::before {
     width: 47px;
@@ -97,7 +97,7 @@
 
 .manual-media-map {
   max-width: 364px;
-  box-shadow: 0 0 45px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 35px 0 rgba(0, 0, 0, 0.2);
 }
 
 .manual-text {

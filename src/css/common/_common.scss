@@ -124,6 +124,7 @@ button, input, select, textarea {
   &:focus,
   &:active {
     outline: none;
+    box-shadow: none;
   }
 }
 
