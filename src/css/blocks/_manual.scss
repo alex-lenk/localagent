@@ -18,15 +18,6 @@
   text-align: center;
   text-transform: uppercase;
   font-size: 16px;
-  @include from('xl') {
-    margin-bottom: 73px;
-  }
-  @include to('m') {
-    margin-bottom: 112px;
-  }
-  @include to('s') {
-    margin-bottom: 70px;
-  }
 }
 
 .manual-one {
@@ -49,7 +40,24 @@
 
 .manual-two {
   padding: 122px 0 152px;
-  background: url(../img/top-decor-line.png) no-repeat top center, url(../img/bottom-decor-line.png) no-repeat bottom center;
+  position: relative;
+  &::before, &::after {
+    width: 100%;
+    content: '';
+    position: absolute;
+    left: 0;
+    background-repeat: no-repeat;
+  }
+  &::before {
+    height: 114px;
+    top: 0;
+    background-image: url(../img/top-decor-line.png);
+  }
+  &::after {
+    height: 86px;
+    bottom: 0;
+    background-image: url(../img/bottom-decor-line.png);
+  }
   .manual-text {
     margin: 0 125px 0 32px;
   }
@@ -58,6 +66,39 @@
     &::before {
       left: -27px;
       content: '2';
+    }
+  }
+}
+
+@include from('xl') {
+  .manual-pre-title {
+    margin-bottom: 73px;
+  }
+}
+
+@include to('m') {
+  .manual-pre-title {
+    margin-bottom: 112px;
+  }
+}
+
+@include to('s') {
+  .manual-pre-title {
+    margin-bottom: 70px;
+  }
+}
+
+@include to('xs') {
+  .manual-two {
+    &::before {
+      height: 60px;
+      background-image: url(../img/blue-line-xs@2x.jpg);
+      background-size: contain;
+    }
+    &::after {
+      height: 60px;
+      background-image: url(../img/gray-line-xs@2x.jpg);
+      background-size: contain;
     }
   }
 }

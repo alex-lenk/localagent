@@ -87,3 +87,9 @@ $('.insurance-type-point').on('click', function () {
     $('.insurance-type-point').removeClass('current');
     $(this).addClass('current');
 });
+
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip({
+        container: 'body'
+    })
+});
