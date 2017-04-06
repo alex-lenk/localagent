@@ -6,6 +6,7 @@
 <body>
 <header class="header-search">
     <!-- include "temp/logo.html" -->
+
     <button class="header-search-right btn btn-white">
         <svg class="phone-help">
             <use xlink:href="img/sprite.svg#phone-help"></use>
@@ -15,15 +16,166 @@
 </header>
 
 <div class="search-wrapper searching-offers-wrap">
+    <div class="search-left search-left-open">
+        <div class="search-left-head">
+            <span class="search-left-head-text">Результаты поиска</span>
+            <div class="search-left-head-arrow">
+                <svg class="arrow">
+                    <use xlink:href="img/sprite.svg#arrow"></use>
+                </svg>
+            </div>
+        </div>
+
+        <div class="search-left-content">
+            <ol class="insurance-agent-list list-unstyled">
+                <li class="insurance-agent">
+                    <div class="insurance-agent-info">
+                        <div class="insurance-agent-face">
+                            <img src="img/example/photo.jpg" alt="">
+                            <svg class="user">
+                                <use xlink:href="img/sprite.svg#user"></use>
+                            </svg>
+                        </div>
+
+                        <div class="insurance-agent-name">РЕСО страхование</div>
+
+                        <div class="text-selection">Страховое агенство</div>
+
+                        <div class="insurance-agent-location">
+                            <svg class="location">
+                                <use xlink:href="img/sprite.svg#location"></use>
+                            </svg>
+                            459 McDermott Forge
+                        </div>
+                    </div>
+
+                    <div class="collapse" id="showText0">
+                        <div class="insurance-agent-desc">
+                            «АХА Страхование» выгодно отличается от остальных страховщиков, так как не вычитает сумму
+                            амортизационного износа и франшизу при расчете страхового возмещения своему страхователю.
+                        </div>
+                    </div>
+
+                    <div class="text-right">
+                        <button class="insurance-agent-more btn as-link collapsed" type="button" data-toggle="collapse"
+                                data-target="#showText0" aria-expanded="false">
+                            <span class="more">Подробнее</span>
+                            <span class="roll-up">Свернуть</span>
+                            <svg class="arrow">
+                                <use xlink:href="img/sprite.svg#arrow"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </li>
+
+                <li class="insurance-agent">
+                    <div class="insurance-agent-info">
+                        <div class="insurance-agent-face">
+                            <img src="img/example/photo-2.jpg" alt="">
+                            <svg class="user">
+                                <use xlink:href="img/sprite.svg#user"></use>
+                            </svg>
+                        </div>
+
+                        <div class="insurance-agent-name">РЕСО страхование</div>
+
+                        <div class="text-selection">Страховое агенство</div>
+
+                        <div class="insurance-agent-location">
+                            <svg class="location">
+                                <use xlink:href="img/sprite.svg#location"></use>
+                            </svg>
+                            59 Schumm Shoals Suite 217 (3.5 km.)
+                        </div>
+                    </div>
+
+                    <div class="collapse" id="showText1">
+                        <div class="insurance-agent-desc">
+                            «АХА Страхование» выгодно отличается от остальных страховщиков, так как не вычитает сумму
+                            амортизационного износа и франшизу при расчете страхового возмещения своему страхователю.
+                        </div>
+                    </div>
+
+                    <div class="text-right">
+                        <button class="insurance-agent-more btn as-link collapsed" type="button" data-toggle="collapse"
+                                data-target="#showText1" aria-expanded="false">
+                            <span class="more">Подробнее</span>
+                            <span class="roll-up">Свернуть</span>
+                            <svg class="arrow">
+                                <use xlink:href="img/sprite.svg#arrow"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </li>
+
+                <li class="insurance-agent">
+                    <div class="insurance-agent-info">
+                        <div class="insurance-agent-face">
+                            <svg class="user">
+                                <use xlink:href="img/sprite.svg#user"></use>
+                            </svg>
+                        </div>
+
+                        <div class="insurance-agent-name">РЕСО страхование</div>
+
+                        <div class="text-selection">Страховое агенство</div>
+
+                        <div class="insurance-agent-location">
+                            <svg class="location">
+                                <use xlink:href="img/sprite.svg#location"></use>
+                            </svg>
+                            114 Makenna Pines Apt. 026
+                        </div>
+                    </div>
+
+                    <div class="collapse" id="showText2">
+                        <div class="insurance-agent-desc">
+                            «АХА Страхование» выгодно отличается от остальных страховщиков, так как не вычитает сумму
+                            амортизационного износа и франшизу при расчете страхового возмещения своему страхователю.
+                        </div>
+                    </div>
+
+                    <div class="text-right">
+                        <button class="insurance-agent-more btn as-link collapsed" type="button" data-toggle="collapse"
+                                data-target="#showText2" aria-expanded="false">
+                            <span class="more">Подробнее</span>
+                            <span class="roll-up">Свернуть</span>
+                            <svg class="arrow">
+                                <use xlink:href="img/sprite.svg#arrow"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </li>
+
+            </ol>
+        </div>
+    </div>
+
     <div class="search-right">
-        <div class="searching-offers">
-            <svg class="search">
-                <use xlink:href="img/sprite.svg#search"></use>
-            </svg>
-            <span>Идет поиск лучших предложений...</span>
+        <div class="search-panel-top">
+            <ul class="result-list list-unstyled">
+                <li>
+                    <svg class="agent">
+                        <use xlink:href="img/sprite.svg#agent"></use>
+                    </svg>
+                </li>
+                <li class="text-nowrap">Мы нашли <span class="text-selection">3</span> страховых агентов!</li>
+                <li class="hidden-xs hidden-sm">Ожидайте, в заданное время звонков с точным расчетом.</li>
+                <li class="hidden-lg hidden-md">Ожидайте, звонков с точным расчетом.</li>
+                <li class="search-show-map"><a href="#search-show-map">Просмотреть на карте</a></li>
+            </ul>
+
+            <div class="searching-offers">
+                <svg class="search">
+                    <use xlink:href="img/sprite.svg#search"></use>
+                </svg>
+                <span>Идет поиск лучших предложений...</span>
+            </div>
         </div>
 
         <div class="search-map" id="search-show-map">
+            <div class="your-location"></div>
+
             <div class="agent-point" style="top: 20%; left: 20%;">
                 <img src="img/example/photo.jpg" alt="">
                 <svg class="user">
@@ -32,7 +184,7 @@
                 <span class="agent-point-number">1</span>
             </div>
 
-            <div class="agent-point" style="top: 50%; left: 50%;">
+            <div class="agent-point" style="top: 50%; left: 10%;">
                 <img src="img/example/photo-2.jpg" alt="">
                 <svg class="user">
                     <use xlink:href="img/sprite.svg#user"></use>

@@ -70,39 +70,6 @@
   }
 }
 
-@include from('xl') {
-  .manual-pre-title {
-    margin-bottom: 73px;
-  }
-}
-
-@include to('m') {
-  .manual-pre-title {
-    margin-bottom: 112px;
-  }
-}
-
-@include to('s') {
-  .manual-pre-title {
-    margin-bottom: 70px;
-  }
-}
-
-@include to('xs') {
-  .manual-two {
-    &::before {
-      height: 60px;
-      background-image: url(../img/blue-line-xs@2x.jpg);
-      background-size: contain;
-    }
-    &::after {
-      height: 60px;
-      background-image: url(../img/gray-line-xs@2x.jpg);
-      background-size: contain;
-    }
-  }
-}
-
 .manual-three {
   padding-top: 60px;
   .manual-media {

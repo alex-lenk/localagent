@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta http-equiv="Cache-Control" content="no-cache">
-
     <meta charset="UTF-8">
     <title>LocalAgent</title>
     <meta name="description" content="">
@@ -22,7 +20,6 @@
     <link rel="manifest" href="img/favicon/manifest.json">
     <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#288db3">
     <meta name="theme-color" content="#ffffff">
-
 </head>
 <body class="page">
 <header class="header-faq">
@@ -55,7 +52,7 @@
     </div>
 </header>
 
-<section class="faq container">
+<section class="faq-page faq container">
     <div class="row">
         <div class="col-md-9" id="accordion" role="tablist" aria-multiselectable="true">
             <div>
@@ -146,14 +143,16 @@
         </div>
 
         <aside class="faq-sidebar col-md-3">
-            <div class="faq-sidebar-question">
-                <svg>
-                    <use xlink:href="img/sprite.svg#question"></use>
-                </svg>
+            <div class="faq-sidebar-wrap">
+                <div class="faq-sidebar-question">
+                    <svg>
+                        <use xlink:href="img/sprite.svg#question"></use>
+                    </svg>
+                </div>
+                <div class="faq-sidebar-text">Не смогли найти ответ на свой вопрос? Пожайлуста напишите нам!</div>
             </div>
-            <div class="faq-sidebar-text">Мы попытаемся ответить на ваши самые распотраненные вопросы</div>
 
-            <a href="faq.html" class="btn btn-transparent">Все воросы/ответы</a>
+            <a href="faq.html" class="btn btn-transparent">Задать Вопрос</a>
         </aside>
     </div>
 </section>

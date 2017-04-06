@@ -9,6 +9,11 @@
 }
 
 @include from('m') {
+
+  .title {
+    font-size: 30px;
+  }
+
   .form-half {
     @include clearfix;
     .form-group {
@@ -23,16 +28,12 @@
     }
   }
 
-  .search-left-open {
-    .mCSB_container.mCS_no_scrollbar_y.mCS_y_hidden {
-      margin-right: 25px;
-    }
+  .search-left-open .mCSB_container.mCS_no_scrollbar_y.mCS_y_hidden {
+    margin-right: 25px;
   }
 
-  .logo {
-    img {
-      max-width: 235px;
-    }
+  .logo img {
+    max-width: 235px;
   }
 
   .navbar-menu {
@@ -133,10 +134,8 @@
   .header-search {
     height: 130px;
   }
-  .search-panel-top {
-    .search-show-map {
-      display: none;
-    }
+  .result-list .search-show-map {
+    display: none;
   }
   .search-left-open .insurance-agent:not(:last-of-type) {
     margin-bottom: 35px;
@@ -336,10 +335,9 @@
       display: none !important;
     }
   }
-  .search-panel-top {
-    li:not(:first-child) {
-      margin-bottom: -2px;
-    }
+
+  .result-list li:not(:first-child) {
+    margin-bottom: -2px;
   }
   .search-left-open {
     flex-basis: 420px;
@@ -372,6 +370,11 @@
 }
 
 @include from('xl') {
+
+  .manual-pre-title {
+    margin-bottom: 73px;
+  }
+
   .header-center {
     padding-left: 15%;
     padding-right: 15%;
@@ -436,11 +439,9 @@
     overflow: auto;
     white-space: nowrap;
   }
-  .search-panel-top {
-    li:first-child {
-      height: 100%;
-      padding-top: 28px;
-    }
+  .result-list li:first-child {
+    height: 100%;
+    padding-top: 28px;
   }
 
   .footer-bottom {
@@ -461,6 +462,14 @@
 }
 
 @include to('l') {
+  .result-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+  }
+
   .navbar {
     padding-top: 24px;
   }
@@ -538,12 +547,45 @@
       padding-top: 60px;
     }
   }
-  .search-panel-top .agent {
+  .result-list .agent {
     display: none;
   }
 }
 
 @include to('m') {
+  .manual-pre-title {
+    margin-bottom: 112px;
+  }
+
+  .faq-page {
+    .faq-sidebar-wrap {
+      flex: 1 1 auto;
+      display: flex;
+      align-items: center;
+    }
+    .faq-sidebar {
+      padding-left: 15px;
+      padding-right: 15px;
+      display: flex;
+      align-items: center;
+      .btn-transparent {
+        margin-top: 0;
+        white-space: nowrap;
+      }
+    }
+    .faq-sidebar-question {
+      width: 80px;
+      height: 80px;
+      flex-basis: 80px;
+      margin: 0;
+      padding: 0 21px;
+    }
+    .faq-sidebar-text {
+      text-align: left;
+      flex: 1 1 auto;
+    }
+  }
+
   h2 {
     font-size: 26px;
   }
@@ -675,7 +717,7 @@
     }
   }
 
-  .search-panel-top {
+  .result-list {
     font-size: 17px;
   }
   .align-left {
@@ -700,6 +742,30 @@
 }
 
 @include to('s') {
+  .manual-pre-title {
+    margin-bottom: 70px;
+  }
+
+  .searching-offers-wrap {
+    height: calc(100% - 110px);
+    .searching-offers {
+      background-color: #f2f9fb;
+    }
+  }
+
+  .faq-page {
+    .faq-sidebar-wrap {
+      margin-bottom: 20px;
+    }
+    .faq-sidebar {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .faq-sidebar-text {
+      padding-left: 20px;
+    }
+  }
+
   .header-search-right {
     padding: 19px 21px 17px 21px;
     .phone-help {
@@ -707,10 +773,8 @@
     }
   }
 
-  .about-advantages .col-sm-6 {
-    &:not(.about-advantages-last) {
-      margin-bottom: 45px;
-    }
+  .about-advantages .col-sm-6:not(.about-advantages-last) {
+    margin-bottom: 45px;
   }
   .checkbox-custom-view {
     a, span {
@@ -1140,14 +1204,6 @@
     height: 19px;
     margin-right: 0;
   }
-
-  .searching-offers-wrap {
-    height: calc(100% - 130px);
-    overflow: hidden;
-    .search-right {
-      position: relative;
-    }
-  }
   .search-panel-top {
     width: 100%;
     height: 125px;
@@ -1156,7 +1212,6 @@
     left: 0;
     background-color: #f2f9fb;
     border-bottom: 1px solid #e3e3e3;
-
     .text-nowrap {
       display: block;
     }
@@ -1260,6 +1315,26 @@
 }
 
 @include to('xs') {
+
+  .manual-two {
+    &::before {
+      height: 60px;
+      background-image: url(../img/blue-line-xs@2x.jpg);
+      background-size: contain;
+    }
+    &::after {
+      height: 60px;
+      background-image: url(../img/gray-line-xs@2x.jpg);
+      background-size: contain;
+    }
+  }
+  .insurance-agent-location {
+    padding-left: 112px;
+    .location {
+      left: 85px;
+    }
+  }
+
   .btn-blue {
     padding-left: 30px;
     padding-right: 30px;
@@ -1454,7 +1529,7 @@
       padding-top: 35px;
     }
   }
-  .search-panel-top {
+  .result-list {
     height: auto;
     padding-bottom: 18px;
     padding-top: 21px;
@@ -1462,7 +1537,7 @@
       display: none;
     }
   }
-  .search-panel-top li {
+  .result-list li {
     font-size: 4.4vw;
   }
   .search-left-open .insurance-agent-face {
@@ -1567,6 +1642,19 @@
 }
 
 @include at('m') {
+  .insurance-agent-location .location {
+    left: 65px;
+  }
+
+  .faq-page {
+    .faq-sidebar-text {
+      padding: 0 24px;
+    }
+    .faq-sidebar .btn-transparent {
+      flex: 1 0 212px;
+    }
+  }
+
   .header-home {
     padding-top: 37px;
     background-size: 150% auto;
@@ -1758,6 +1846,13 @@
 }
 
 @include at('s') {
+  .insurance-agent-location {
+    padding-left: 115px;
+    .location {
+      left: 88px;
+    }
+  }
+  
   .header-title {
     font-size: 30px;
   }
@@ -1779,7 +1874,7 @@
       height: 190px;
     }
   }
-  .search-panel-top li {
+  .result-list li {
     font-size: 17px;
   }
   .manual-one .manual-media::before {
@@ -1837,9 +1932,6 @@
     justify-content: center;
     align-items: center;
     align-content: center;
-    .text-nowrap {
-      margin-right: 7px;
-    }
   }
 }
 

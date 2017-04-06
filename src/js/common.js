@@ -32,7 +32,7 @@ $(document).ready(function () {
 
     $('.select-open + .arrow').on('click', function () {
         $(this).parent().find('.select-open').toggleClass('select-active');
-        $(this).parent().parent().find('.make-choice').toggleClass('make-choice-active');
+        $(this).parent().find('.make-choice').toggleClass('make-choice-active');
     });
 
     $('.datepicker-here').on('click', function () {

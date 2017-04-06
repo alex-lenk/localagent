@@ -47,28 +47,15 @@
   }
 }
 
-.searching-offers {
-  height: 80px;
-  padding: 0 15px;
-  background-color: #ffffff;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  @include RobotoRegular;
-  .search {
-    width: 23px;
-    height: 27px;
-    margin-right: 20px;
-    fill: #505b6a;
-  }
-}
-
 .search-panel-top {
   height: 80px;
   padding: 0 15px;
   background-color: #ffffff;
   text-align: center;
+}
+
+.result-list {
+  height: 100%;
   font-size: 0;
   @include RobotoRegular;
   li {
@@ -84,9 +71,39 @@
     margin-right: 20px;
     fill: #505b6a;
   }
+  .text-nowrap {
+    padding-right: 7px;
+  }
+}
+
+.searching-offers {
+  display: none;
+  height: 100%;
+  padding: 0 15px;
+  background-color: #ffffff;
+  font-size: 18px;
+  justify-content: center;
+  align-items: center;
+  @include RobotoRegular;
+  .search {
+    width: 24px;
+    height: 27px;
+    margin-right: 20px;
+    fill: #505b6a;
+  }
+}
+
+.searching-offers-wrap {
+  .searching-offers {
+    display: flex;
+  }
+  .result-list, .search-left, .agent-point {
+    display: none;
+  }
 }
 
 li.search-show-map {
+  width: 100%;
   margin: 20px 0 0;
   display: block;
   @include RobotoBold;
@@ -300,29 +317,6 @@ li.search-show-map {
     position: absolute;
     top: -1px;
     left: 67px;
-  }
-}
-
-@include at('m') {
-  .insurance-agent-location .location {
-    left: 65px;
-  }
-}
-
-@include at('s') {
-  .insurance-agent-location {
-    padding-left: 115px;
-    .location {
-      left: 88px;
-    }
-  }
-}
-@include to('xs') {
-  .insurance-agent-location {
-    padding-left: 112px;
-    .location {
-      left: 85px;
-    }
   }
 }
 

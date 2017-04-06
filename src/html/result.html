@@ -152,17 +152,26 @@
     </div>
 
     <div class="search-right">
-        <ul class="search-panel-top list-unstyled">
-            <li>
-                <svg class="agent">
-                    <use xlink:href="img/sprite.svg#agent"></use>
+        <div class="search-panel-top">
+            <ul class="result-list list-unstyled">
+                <li>
+                    <svg class="agent">
+                        <use xlink:href="img/sprite.svg#agent"></use>
+                    </svg>
+                </li>
+                <li class="text-nowrap">Мы нашли <span class="text-selection">3</span> страховых агентов!</li>
+                <li class="hidden-xs hidden-sm">Ожидайте, в заданное время звонков с точным расчетом.</li>
+                <li class="hidden-lg hidden-md">Ожидайте, звонков с точным расчетом.</li>
+                <li class="search-show-map"><a href="#search-show-map">Просмотреть на карте</a></li>
+            </ul>
+
+            <div class="searching-offers">
+                <svg class="search">
+                    <use xlink:href="img/sprite.svg#search"></use>
                 </svg>
-            </li>
-            <li class="text-nowrap">Мы нашли <span class="text-selection">3</span> страховых агентов!</li>
-            <li class="hidden-xs hidden-sm">Ожидайте, в заданное время звонков с точным расчетом.</li>
-            <li class="hidden-lg hidden-md">Ожидайте, звонков с точным расчетом.</li>
-            <li class="search-show-map"><a href="#search-show-map">Просмотреть на карте</a></li>
-        </ul>
+                <span>Идет поиск лучших предложений...</span>
+            </div>
+        </div>
 
         <div class="search-map" id="search-show-map">
             <div class="your-location"></div>

@@ -5,6 +5,10 @@
 }
 
 @media (min-width: 769px) {
+    .title {
+        font-size: 30px;
+    }
+
     .form-half:after {
         display: table;
         clear: both;
@@ -145,7 +149,7 @@
         height: 130px;
     }
 
-    .search-panel-top .search-show-map {
+    .result-list .search-show-map {
         display: none;
     }
 
@@ -378,7 +382,7 @@
         display: none !important;
     }
 
-    .search-panel-top li:not(:first-child) {
+    .result-list li:not(:first-child) {
         margin-bottom: -2px;
     }
 
@@ -418,6 +422,10 @@
 }
 
 @media (min-width: 1201px) {
+    .manual-pre-title {
+        margin-bottom: 73px;
+    }
+
     .header-center {
         padding-left: 15%;
         padding-right: 15%;
@@ -493,7 +501,7 @@
         white-space: nowrap;
     }
 
-    .search-panel-top li:first-child {
+    .result-list li:first-child {
         height: 100%;
         padding-top: 28px;
     }
@@ -517,6 +525,24 @@
 }
 
 @media (max-width: 1200px) {
+    .result-list {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-align-content: center;
+        -ms-flex-line-pack: center;
+        align-content: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
     .navbar {
         padding-top: 24px;
     }
@@ -607,12 +633,61 @@
         padding-top: 60px;
     }
 
-    .search-panel-top .agent {
+    .result-list .agent {
         display: none;
     }
 }
 
 @media (max-width: 992px) {
+    .manual-pre-title {
+        margin-bottom: 112px;
+    }
+
+    .faq-page .faq-sidebar-wrap {
+        -webkit-flex: 1 1 auto;
+        -ms-flex: 1 1 auto;
+        flex: 1 1 auto;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+
+    .faq-page .faq-sidebar {
+        padding-left: 15px;
+        padding-right: 15px;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+
+    .faq-page .faq-sidebar .btn-transparent {
+        margin-top: 0;
+        white-space: nowrap;
+    }
+
+    .faq-page .faq-sidebar-question {
+        width: 80px;
+        height: 80px;
+        -webkit-flex-basis: 80px;
+        -ms-flex-preferred-size: 80px;
+        flex-basis: 80px;
+        margin: 0;
+        padding: 0 21px;
+    }
+
+    .faq-page .faq-sidebar-text {
+        text-align: left;
+        -webkit-flex: 1 1 auto;
+        -ms-flex: 1 1 auto;
+        flex: 1 1 auto;
+    }
+
     h2 {
         font-size: 26px;
     }
@@ -761,7 +836,7 @@
         top: 0;
     }
 
-    .search-panel-top {
+    .result-list {
         font-size: 17px;
     }
 
@@ -788,6 +863,35 @@
 }
 
 @media (max-width: 768px) {
+    .manual-pre-title {
+        margin-bottom: 70px;
+    }
+
+    .searching-offers-wrap {
+        height: calc(100% - 110px);
+    }
+
+    .searching-offers-wrap .searching-offers {
+        background-color: #f2f9fb;
+    }
+
+    .faq-page .faq-sidebar-wrap {
+        margin-bottom: 20px;
+    }
+
+    .faq-page .faq-sidebar {
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    .faq-page .faq-sidebar-text {
+        padding-left: 20px;
+    }
+
     .header-search-right {
         padding: 19px 21px 17px 21px;
     }
@@ -1342,15 +1446,6 @@
         margin-right: 0;
     }
 
-    .searching-offers-wrap {
-        height: calc(100% - 130px);
-        overflow: hidden;
-    }
-
-    .searching-offers-wrap .search-right {
-        position: relative;
-    }
-
     .search-panel-top {
         width: 100%;
         height: 125px;
@@ -1478,6 +1573,26 @@
 }
 
 @media (max-width: 414px) {
+    .manual-two::before {
+        height: 60px;
+        background-image: url(../img/blue-line-xs@2x.jpg);
+        background-size: contain;
+    }
+
+    .manual-two::after {
+        height: 60px;
+        background-image: url(../img/gray-line-xs@2x.jpg);
+        background-size: contain;
+    }
+
+    .insurance-agent-location {
+        padding-left: 112px;
+    }
+
+    .insurance-agent-location .location {
+        left: 85px;
+    }
+
     .btn-blue {
         padding-left: 30px;
         padding-right: 30px;
@@ -1687,17 +1802,17 @@
         padding-top: 35px;
     }
 
-    .search-panel-top {
+    .result-list {
         height: auto;
         padding-bottom: 18px;
         padding-top: 21px;
     }
 
-    .search-panel-top li:first-child {
+    .result-list li:first-child {
         display: none;
     }
 
-    .search-panel-top li {
+    .result-list li {
         font-size: 4.4vw;
     }
 
@@ -1819,6 +1934,20 @@
 }
 
 @media (min-width: 769px) and (max-width: 992px) {
+    .insurance-agent-location .location {
+        left: 65px;
+    }
+
+    .faq-page .faq-sidebar-text {
+        padding: 0 24px;
+    }
+
+    .faq-page .faq-sidebar .btn-transparent {
+        -webkit-flex: 1 0 212px;
+        -ms-flex: 1 0 212px;
+        flex: 1 0 212px;
+    }
+
     .header-home {
         padding-top: 37px;
         background-size: 150% auto;
@@ -2039,6 +2168,14 @@
 }
 
 @media (min-width: 415px) and (max-width: 768px) {
+    .insurance-agent-location {
+        padding-left: 115px;
+    }
+
+    .insurance-agent-location .location {
+        left: 88px;
+    }
+
     .header-title {
         font-size: 30px;
     }
@@ -2063,7 +2200,7 @@
         height: 190px;
     }
 
-    .search-panel-top li {
+    .result-list li {
         font-size: 17px;
     }
 
@@ -2141,10 +2278,6 @@
         -ms-flex-line-pack: center;
         align-content: center;
     }
-
-    .search-panel-top .text-nowrap {
-        margin-right: 7px;
-    }
 }
 
 @media (min-width: 415px) and (max-width: 992px) {
@@ -2214,3 +2347,5 @@
         background-size: 110% auto;
     }
 }
+
+/*# sourceMappingURL=../maps/media.css.map */
